@@ -2,7 +2,6 @@ class QueryEndpoints:
 
     def __init__(self):
 
-        self.base_url = "https://www.barchart.com"
         self.quote = "https://www.barchart.com/proxies/core-api/v1/quotes/get?"
         self.options = "https://www.barchart.com/proxies/core-api/v1/options/get?"
         self.options_flow = "https://www.barchart.com/proxies/core-api/v1/options/flow?"
