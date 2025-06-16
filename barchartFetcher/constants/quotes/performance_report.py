@@ -51,7 +51,7 @@ PAST_5M_FIELDS = (
 )
 
 # Price Performance Fields:
-PRICE_PERF_FIELDS = (
+PRICE_PERFORMANCE_FIELDS = (
     "lastPrice,percentChange5d,lowPrice5d,highPrice5d,"
     "lastPrice,percentChange1m,lowPrice1m,highPrice1m,"
     "lastPrice,percentChange3m,lowPrice3m,highPrice3m,"
@@ -64,7 +64,7 @@ PRICE_PERF_FIELDS = (
 )
 
 # Performance Lows and Highs Fields:
-LOWS_HIGHS_FIELDS = (
+HIGHS_AND_LOWS_FIELDS = (
     "highHits1m,highPercent1m,lowHits1m,lowPercent1m,"
     "highHits3m,highPercent3m,lowHits3m,lowPercent3m,"
     "highHits6m,highPercent6m,lowHits6m,lowPercent6m,"
@@ -82,5 +82,5 @@ class PerformanceReportFields:
         self.past_5d_fields = PAST_5D_FIELDS
         self.past_5w_fields = PAST_5W_FIELDS
         self.past_5m_fields = PAST_5M_FIELDS
-        self.price_perf_fields = PRICE_PERF_FIELDS
-        self.lows_highs_fields = LOWS_HIGHS_FIELDS
+        self.price_perf_fields = PRICE_PERFORMANCE_FIELDS
+        self.lows_highs_fields = HIGHS_AND_LOWS_FIELDS
