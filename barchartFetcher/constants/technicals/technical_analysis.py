@@ -1,5 +1,5 @@
 # Moving Average fields
-MA_FIELDS = (
+MOVING_AVERAGES_FIELDS = (
     "movingAverage5d,priceChange5d,percentChange5d,averageVolume5d,movingAverage20d,"
     "priceChange20d,percentChange20d,averageVolume20d,movingAverage50d,"
     "priceChange50d,percentChange50d,averageVolume50d,movingAverage100d,"
@@ -30,6 +30,6 @@ STRENGTH_FIELDS = (
 
 class TechnicalAnalysisFields:
     def __init__(self):
-        self.ma_fields = MA_FIELDS
+        self.moving_averages_fields = MOVING_AVERAGES_FIELDS
         self.stochastics_fields = STOCHASTICS_FIELDS
         self.strength_fields = STRENGTH_FIELDS
