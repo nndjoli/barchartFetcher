@@ -22,7 +22,10 @@ class QueryManager:
         self.XSRFToken: str = self._auth.XSRFToken
 
     def sync_query(
-        self, url: str, output_format: str = "json"
+        self,
+        url: str,
+        output_format: str = "json",
+        method: str = "GET",
     ) -> Union[Any, str]:
         """Fetch a single URL synchronously.
 
@@ -48,6 +51,7 @@ class QueryManager:
             output_format=output_format,
             headers=self.headers,
             cookies=self.cookies,
+            method=method,
         )
 
     async def __async_queries(

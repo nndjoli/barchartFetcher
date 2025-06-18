@@ -11,6 +11,7 @@ def sync_query(
     output_format: str = "json",
     headers: Optional[Dict[str, str]] = None,
     cookies: Optional[Dict[str, str]] = None,
+    method: str = "GET",
 ) -> Union[Any, str]:
     """Synchronously fetch an URL.
 
@@ -44,7 +45,10 @@ def sync_query(
         with httpx.Client(
             headers=headers, cookies=cookies, timeout=10
         ) as client:
-            response = client.get(url)
+            if method.upper() == "POST":
+                response = client.post(url, headers=headers, cookies=cookies)
+            else:
+                response = client.get(url)
 
         if response.status_code == 200:
             if output_format == "html":
