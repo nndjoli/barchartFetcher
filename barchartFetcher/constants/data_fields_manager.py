@@ -265,12 +265,11 @@ def build_api_fields_df(organized_fields_dfs):
 
 def main(query_manager: QueryManager):
 
-    response = fetch_data_fields(qm)
+    response = fetch_data_fields(query_manager)
     mapping = build_mapping(response)
     processed_response = apply_mapping(mapping, response)
     organized_response = organize_fields(processed_response, FIELDS_GROUPS)
     organized_fields_dfs = organize_fields_dfs(organized_response)
-    print(organized_fields_dfs)
     api_fields_df = build_api_fields_df(organized_fields_dfs)
 
     return {
