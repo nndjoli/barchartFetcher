@@ -330,7 +330,7 @@ class SymbolQueryClient:
             self.etfName = tempdf["etfName"].to_list()
             self.fundFamily = tempdf["fundFamily"].to_list()
             self.assetClass = tempdf["assetClass"].to_list()
-            self.leverage = tempdf["leverage"].to_list
+            self.leverage = tempdf["leverage"].to_list()
             self.managedAssets = tempdf["managedAssets"].to_list()
             self.netAssetValue = tempdf["netAssetValue"].to_list()
             self.managementFee = tempdf["managementFee"].to_list()
