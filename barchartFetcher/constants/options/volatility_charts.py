@@ -1,10 +1,13 @@
+# IV Rank Percentile Fields:
 IV_RANK_PERCENTILE_FIELDS = (
     "impliedVolatilityRank1y,impliedVolatilityPercentile1y,"
     "totalVolume,totalOpenInterest,historicalLastPrice,date"
 )
 
+# Historical Volatility Fields:
 HISTORICAL_VOLATILITY_FIELDS = "volatility,tradeTime"
 
+# Expiration Dates Historical Implied Volatility Fields:
 EX_HISTO_IV_FIELDS = (
     "date,delta05_puts,delta10_puts,delta15_puts,delta20_puts,delta25_puts,delta30_puts"
     "delta35_puts,delta40_puts,delta45_puts,delta50_puts,delta55_puts,delta60_puts"
@@ -19,6 +22,7 @@ EX_HISTO_IV_FIELDS = (
     "delta95_both"
 )
 
+# Days to Expiration Historical Implied Volatility Fields:
 DTE_HISTO_IV_FIELDS = (
     "date,delta05_30_puts,delta05_60_puts,delta05_90_puts,delta05_120_puts"
     "delta05_150_puts,delta05_180_puts,delta05_360_puts,delta10_30_puts"
