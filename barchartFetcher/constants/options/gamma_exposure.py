@@ -17,5 +17,6 @@ class GEXFields:
             "Need to replace OPTIONS_EXPIRATIONS_FIELDS by the queried symbol options expiraitons.\n"
             "options_expirations_url = options_expirations_endpt + f'symbols=symbol&fields={options_expirations_fields}&raw=1\n"
             "options_expirations = QueryManager().sync_query(options_expirations_url)\n"
+            "...turn options_expirations into a list of dates."
             "(','.join(options_expirations))"
         )
