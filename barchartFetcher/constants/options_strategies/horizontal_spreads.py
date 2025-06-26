@@ -67,10 +67,9 @@ class HorizontalSpreadsFields:
         self.short_call_diagonal_fields = SHORT_CALL_DIAGONAL_FIELDS
         self.long_put_diagonal_fields = LONG_PUT_DIAGONAL_FIELDS
         self.short_put_diagonal_fields = SHORT_PUT_DIAGONAL_FIELDS
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Each strategy has its own endpoint and fields.
-            
+
             Add symbol field via `baseSymbol`;
             meta: expirations,field.shortName,field.type,field.description;
             raw: 1
@@ -78,5 +77,4 @@ class HorizontalSpreadsFields:
             expirationType: default weekly
             page: defaut 1
             limit : default 100
-            """
-        )
+        """
