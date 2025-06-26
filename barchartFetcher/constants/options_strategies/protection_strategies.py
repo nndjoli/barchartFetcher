@@ -25,16 +25,13 @@ class ProtectionStrategiesFields:
     def __init__(self):
         self.married_puts_fields = MARRIED_PUTS_FIELDS
         self.long_collar_spread_fields = LONG_COLLAR_SPREAD_FIELDS
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Each strategy has its own endpoint:
             - Married Puts: "married_puts"
             - Long Collar Spread: "long_collar_spread"
-            
+
             Pass symbol via `baseSymbol`;
             Default `meta` = "expirations,field.shortName,field.type,field.description"
             Default `raw` = 1
             Optional: [expirationDate(default="nearest"), expirationType(default="weekly"), page(default=1), limit(default=100)] parameters
-            
-            """
-        )
+        """
