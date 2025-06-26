@@ -14,11 +14,9 @@ class CoveredCallsFields:
     def __init__(self):
         self.covered_calls_fields = COVERED_CALLS_FIELDS
         self.covered_calls_endpoint = "covered_calls"
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Pass symbol via `baseSymbol`;
             Default `meta` = "expirations,field.shortName,field.type,field.description"
             Default `raw` = 1
             Optional: [expirationDate, expirationType, page] parameters
-            """
-        )
+        """
