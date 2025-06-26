@@ -41,18 +41,15 @@ class StraddlesStranglesFields:
         self.short_straddle_fields = SHORT_STRADDLE_FIELDS
         self.long_strangle_fields = LONG_STRANGLE_FIELDS
         self.short_strangle_fields = SHORT_STRANGLE_FIELDS
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Each strategy has its own endpoint:
             - Long Straddle: "long_straddle"
             - Short Straddle: "short_straddle"
             - Long Strangle: "long_strangle"
             - Short Strangle: "short_strangle"
-            
+
             Pass symbol via `baseSymbol`;
             Default `meta` = "expirations,field.shortName,field.type,field.description"
             Default `raw` = 1
             Optional: [expirationDate(default="nearest"), expirationType(default="weekly"), page(default=1), limit(default=100)] parameters
-            
-            """
-        )
+        """
