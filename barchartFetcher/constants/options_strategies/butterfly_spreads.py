@@ -69,8 +69,7 @@ class ButterflySpreadsFields:
         self.short_put_butterfly_fields = SHORT_PUT_BUTTERFLY_FIELDS
         self.long_iron_butterfly_fields = LONG_IRON_BUTTERFLY_FIELDS
         self.short_iron_butterfly_fields = SHORT_IRON_BUTTERFLY_FIELDS
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Add symbol via `baseSymbol`;
             meta: expirations,field.shortName,field.type,field.description;
             expirationDate: "nearest" (default_value)
@@ -78,5 +77,4 @@ class ButterflySpreadsFields:
             page: 1 (default_value)
             limit: 100 (default_value)
             raw: 1 (default_value)
-            """
-        )
+        """
