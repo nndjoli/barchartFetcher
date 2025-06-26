@@ -24,9 +24,8 @@ class SymbolQueryClient:
         self.query_manager = QueryManager()
         self.data_fields_manager = DataFieldsManager(self.query_manager)
         self.query_strings_manager = QueryStringsManager(
-            self.query_manager, self.data_fields_manager.complete_dataframe
-        )
-        self.query_category_builder = QueryCategoryBuilder(
+            self.data_fields_manager.complete_dataframe
+        )        self.query_category_builder = QueryCategoryBuilder(
             self.query_manager, self.query_strings_manager.query_strings_dict
         )
 
@@ -52,7 +51,6 @@ class SymbolQueryClient:
 
         def __init__(self, parent):
             self._parent = parent
-            self.symbols = parent.symbols
             self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "informations", self.symbols
@@ -96,7 +94,6 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "quotes", self.symbols
             )
@@ -134,7 +131,6 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "technicals", self.symbols
             )
@@ -161,7 +157,6 @@ class SymbolQueryClient:
 
         def __init__(self, parent):
             self._parent = parent
-            self.symbols = parent.symbols
             self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "sentiment", self.symbols
@@ -195,7 +190,6 @@ class SymbolQueryClient:
 
         def __init__(self, parent):
             self._parent = parent
-            self.symbols = parent.symbols
             self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "highs_and_lows", self.symbols
@@ -240,7 +234,6 @@ class SymbolQueryClient:
 
         def __init__(self, parent):
             self._parent = parent
-            self.symbols = parent.symbols
             self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "fundamentals", self.symbols
@@ -293,7 +286,6 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "options", self.symbols
             )
@@ -322,7 +314,6 @@ class SymbolQueryClient:
 
         def __init__(self, parent):
             self._parent = parent
-            self.symbols = parent.symbols
             self.symbols = parent.symbols
             self.data = parent.query_category_builder.get("etfs", self.symbols)
 
@@ -357,7 +348,6 @@ class SymbolQueryClient:
 
         def __init__(self, parent):
             self._parent = parent
-            self.symbols = parent.symbols
             self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "futures", self.symbols
@@ -404,7 +394,6 @@ class SymbolQueryClient:
 
         def __init__(self, parent):
             self._parent = parent
-            self.symbols = parent.symbols
             self.symbols = parent.symbols
             self.data = parent.query_category_builder.get(
                 "portfolio", self.symbols
