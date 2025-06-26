@@ -29,11 +29,9 @@ class LongCallPutFields:
     def __init__(self):
         self.long_call_fields = LONG_CALL_FIELDS
         self.long_put_fields = LONG_PUT_FIELDS
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Endpoint: "options"
             Add symbol field via `baseSymbol`;
             meta: expirations,field.shortName,field.type,field.description;
             raw: 1
-            """
-        )
+        """
