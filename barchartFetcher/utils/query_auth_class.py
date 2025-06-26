@@ -6,7 +6,9 @@ class QueryAuthClass:
 
     def __init__(self):
         self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/"
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " "AppleWebKit/537.36 (KHTML, like Gecko) " "Chrome/115.0.0.0 Safari/537.36"
+            )
         }
         self.cookies = self.get_cookies()
         self.XSRFToken = urllib.parse.unquote(self.cookies["XSRF-TOKEN"])
