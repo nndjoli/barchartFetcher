@@ -48,18 +48,15 @@ class VerticalSpreadsFields:
         self.bear_call_spreads_fields = BEAR_CALL_SPREADS_FIELDS
         self.bear_put_spreads_fields = BEAR_PUT_SPREADS_FIELDS
         self.bull_put_spreads_fields = BULL_PUT_SPREADS_FIELDS
-
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Each spread type has its own endpoint:
             - Bull Call Spreads: `bull-calls-spread`
             - Bear Call Spreads: `bear-calls-spread`
             - Bear Put Spreads: `bear-puts-spread`
             - Bull Put Spreads: `bull-puts-spread`
-            
+
             Pass symbol using baseSymbol;
             Default meta = field.shortName,field.description,expirations,field.shortName,field.type;
-            Optional: [expirationDate, expirationType] parameters; 
+            Optional: [expirationDate, expirationType] parameters;
             Default raw = 1
-            """
-        )
+        """
