@@ -73,8 +73,7 @@ class CondorFields:
         self.short_put_condor_fields = SHORT_PUT_CONDOR_FIELDS
         self.long_iron_condor_fields = LONG_IRON_CONDOR_FIELDS
         self.short_iron_condor_fields = SHORT_IRON_CONDOR_FIELDS
-        self.additional_infos = print(
-            """
+        self.additional_infos = """
             Each condor strategy has its own endpoint/ fields combination;
             Add symbol field via `baseSymbol`;
             meta: expirations,field.shortName,field.type,field.description;
@@ -83,5 +82,4 @@ class CondorFields:
             page: 1 (default_value);
             pageSize: 100 (default_value);
             raw: 1
-            """
-        )
+        """
