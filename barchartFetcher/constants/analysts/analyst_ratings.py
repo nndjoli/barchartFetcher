@@ -12,7 +12,7 @@ ANALYST_RATINGS_FIELDS = (
 class AnalystRatingsFields:
     def __init__(self):
         self.analyst_ratings_fields = {
-            "endpoint": "quotes",
+            "endpoint": "quote",
             "symbol_param": "symbol",
             "fields": ANALYST_RATINGS_FIELDS,
             "meta": "field.shortName,field.type,field.description",

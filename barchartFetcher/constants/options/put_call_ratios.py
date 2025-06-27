@@ -15,7 +15,7 @@ PUT_CALL_RATIOS_HISTORICAL_FIELDS = (
 class PutCallRatioSFields:
     def __init__(self):
         self.put_call_ratio_fields = {
-            "endpoint": "options-expirations",
+            "endpoint": "options_expirations",
             "symbol_param": "symbol",
             "fields": PUT_CALL_RATIOS_FIELDS,
             "meta": "field.shortName,field.description,field.type",
@@ -24,7 +24,7 @@ class PutCallRatioSFields:
             "limit": 100,
         }
         self.put_call_ratio_historical_fields = {
-            "endpoint": "options-historical",
+            "endpoint": "options_historical",
             "symbol_param": "symbol",
             "fields": PUT_CALL_RATIOS_HISTORICAL_FIELDS,
             "limit": 200,

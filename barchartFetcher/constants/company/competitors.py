@@ -9,7 +9,7 @@ SECTOR_COMPETITORS_FIELDS = (
 class SectorCompetitorsFields:
     def __init__(self):
         self.sector_competitors_fields = {
-            "endpoint": "quotes/get",
+            "endpoint": "quote",
             "symbol_param": "symbol",
             "lists": "stocks.inSector.all(<sector_symbol_from_key_statistics>)",
             "fields": SECTOR_COMPETITORS_FIELDS,

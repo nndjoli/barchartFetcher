@@ -23,7 +23,7 @@ LONG_COLLAR_SPREAD_FIELDS = (
 class ProtectionStrategiesFields:
     def __init__(self):
         self.married_puts_fields = {
-            "endpoint": "options/married-put",
+            "endpoint": "married_puts",
             "symbol_param": "baseSymbol",
             "fields": MARRIED_PUTS_FIELDS,
             "orderBy": "strikePrice",
@@ -37,7 +37,7 @@ class ProtectionStrategiesFields:
         }
 
         self.long_collar_spread_fields = {
-            "endpoint": "options/long-collar-spread",
+            "endpoint": "long_collar_spread",
             "symbol_param": "baseSymbol",
             "fields": LONG_COLLAR_SPREAD_FIELDS,
             "orderBy": "strikeLeg1",

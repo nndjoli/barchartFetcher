@@ -15,7 +15,7 @@ BULLISH_BEARISH_SENTIMENT_FIELDS = (
 class OptionsFlowFields:
     def __init__(self):
         self.options_flow_fields = {
-            "endpoint": "options-flow",
+            "endpoint": "options_flow",
             "symbol_param": "symbol",
             "fields": OPTIONS_FLOW_FIELDS,
             "orderBy": "premium",
@@ -27,7 +27,7 @@ class OptionsFlowFields:
         }
 
         self.bullish_bearish_sentiment_fields = {
-            "endpoint": "options-flow",
+            "endpoint": "options_flow",
             "symbol_param": "symbol",
             "fields": BULLISH_BEARISH_SENTIMENT_FIELDS,
             "in(sentiment,(Bearish,Bullish))": "",

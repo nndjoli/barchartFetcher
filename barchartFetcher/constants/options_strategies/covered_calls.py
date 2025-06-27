@@ -13,7 +13,7 @@ COVERED_CALLS_FIELDS = (
 class CoveredCallsFields:
     def __init__(self):
         self.covered_calls_fields = {
-            "endpoint": "options/covered-calls",
+            "endpoint": "covered_calls",
             "symbol_param": "baseSymbol",
             "fields": COVERED_CALLS_FIELDS,
             "orderBy": "strike",

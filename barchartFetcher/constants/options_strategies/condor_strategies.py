@@ -62,7 +62,7 @@ SHORT_IRON_CONDOR_FIELDS = (
 class CondorFields:
     def __init__(self):
         self.long_call_condor_fields = {
-            "endpoint": "options/long-call-condors",
+            "endpoint": "long_call_condor",
             "symbol_param": "baseSymbol",
             "fields": LONG_CALL_CONDOR_FIELDS,
             "orderBy": "breakEvenProbability",
@@ -76,7 +76,7 @@ class CondorFields:
         }
 
         self.short_call_condor_fields = {
-            "endpoint": "options/short-call-condors",
+            "endpoint": "short_call_condor",
             "symbol_param": "baseSymbol",
             "fields": SHORT_CALL_CONDOR_FIELDS,
             "orderBy": "lossProbability",
@@ -90,7 +90,7 @@ class CondorFields:
         }
 
         self.long_put_condor_fields = {
-            "endpoint": "options/long-put-condors",
+            "endpoint": "long_put_condor",
             "symbol_param": "baseSymbol",
             "fields": LONG_PUT_CONDOR_FIELDS,
             "orderBy": "breakEvenProbability",
@@ -104,7 +104,7 @@ class CondorFields:
         }
 
         self.short_put_condor_fields = {
-            "endpoint": "options/short-put-condors",
+            "endpoint": "short_put_condor",
             "symbol_param": "baseSymbol",
             "fields": SHORT_PUT_CONDOR_FIELDS,
             "orderBy": "lossProbability",
@@ -118,7 +118,7 @@ class CondorFields:
         }
 
         self.long_iron_condor_fields = {
-            "endpoint": "options/long-condors",
+            "endpoint": "long_iron_condor",
             "symbol_param": "baseSymbol",
             "fields": LONG_IRON_CONDOR_FIELDS,
             "orderBy": "breakEvenProbability",
@@ -132,7 +132,7 @@ class CondorFields:
         }
 
         self.short_iron_condor_fields = {
-            "endpoint": "options/short-condors",
+            "endpoint": "short_iron_condor",
             "symbol_param": "baseSymbol",
             "fields": SHORT_IRON_CONDOR_FIELDS,
             "orderBy": "lossProbability",

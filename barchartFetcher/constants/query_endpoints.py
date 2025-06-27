@@ -1,23 +1,32 @@
 class QueryEndpoints:
-
     def __init__(self):
-
         # Quote Endpoint
         self.quote = "https://www.barchart.com/proxies/core-api/v1/quotes/get?"
 
         # Historical Endpoints
-        self.historical = "https://www.barchart.com/proxies/core-api/v1/historical/get?"
+        self.historical = (
+            "https://www.barchart.com/proxies/core-api/v1/historical/get?"
+        )
         self.historical_volatility = "https://www.barchart.com/proxies/core-api/v1/historical-volatility/get?"
 
         # Options Endpoints
-        self.options = "https://www.barchart.com/proxies/core-api/v1/options/get?"
-        self.options_flow = "https://www.barchart.com/proxies/core-api/v1/options/flow?"
+        self.options = (
+            "https://www.barchart.com/proxies/core-api/v1/options/get?"
+        )
+        self.options_flow = (
+            "https://www.barchart.com/proxies/core-api/v1/options/flow?"
+        )
         self.options_historical = "https://www.barchart.com/proxies/core-api/v1/options-historical/get?"
         self.options_expirations = "https://www.barchart.com/proxies/core-api/v1/options-expirations/get?"
+        self.options_delta = (
+            "https://www.barchart.com/proxies/core-api/v1/options/delta/get?"
+        )
 
         # Options Strategies Endpoints
         self.covered_calls = "https://www.barchart.com/proxies/core-api/v1/options/covered-calls?"
-        self.naked_puts = "https://www.barchart.com/proxies/core-api/v1/options/naked-puts?"
+        self.naked_puts = (
+            "https://www.barchart.com/proxies/core-api/v1/options/naked-puts?"
+        )
 
         # Vertical Spreads Endpoints
         self.bear_call_spreads = "https://www.barchart.com/proxies/core-api/v1/options/bear-calls-spread?"
@@ -26,7 +35,9 @@ class QueryEndpoints:
         self.bull_put_spreads = "https://www.barchart.com/proxies/core-api/v1/options/bull-puts-spread?"
 
         # Protection Strategies Endpoints
-        self.married_puts = "https://www.barchart.com/proxies/core-api/v1/options/married-put?"
+        self.married_puts = (
+            "https://www.barchart.com/proxies/core-api/v1/options/married-put?"
+        )
         self.long_collar_spread = "https://www.barchart.com/proxies/core-api/v1/options/long-collar-spread?"
 
         # Straddle and Strangle Strategies Endpoints
@@ -61,6 +72,12 @@ class QueryEndpoints:
 
         # Others
         self.earnings_dividends = "https://www.barchart.com/proxies/core-api/v1/earnings-dividends/get?"
-        self.insider_trades = "https://www.barchart.com/proxies/core-api/v1/insiderTrades/get?"
-        self.momentum = "https://www.barchart.com/proxies/core-api/v1/momentum/get?"
-        self.sec_filings = "https://www.barchart.com/proxies/core-api/v1/sec-filings/get?"
+        self.insider_trades = (
+            "https://www.barchart.com/proxies/core-api/v1/insiderTrades/get?"
+        )
+        self.momentum = (
+            "https://www.barchart.com/proxies/core-api/v1/momentum/get?"
+        )
+        self.sec_filings = (
+            "https://www.barchart.com/proxies/core-api/v1/sec-filings/get?"
+        )

@@ -12,7 +12,7 @@ EARNINGS_FIELDS = "tradeTime.format(Y-m-d),value,event"
 class ExpectedMoveFields:
     def __init__(self):
         self.expected_move_fields = {
-            "endpoint": "options-expirations",
+            "endpoint": "options_expirations",
             "symbol_param": "symbol",
             "fields": EXPECTED_MOVE_FIELDS,
             "orderBy": "expirationDate",

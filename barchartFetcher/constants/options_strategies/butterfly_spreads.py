@@ -61,7 +61,7 @@ SHORT_IRON_BUTTERFLY_FIELDS = (
 class ButterflySpreadsFields:
     def __init__(self):
         self.long_call_butterfly_fields = {
-            "endpoint": "options/long-call-butterfly-spread",
+            "endpoint": "long_call_butterfly",
             "symbol_param": "baseSymbol",
             "fields": LONG_CALL_BUTTERFLY_FIELDS,
             "orderBy": "breakEvenProbability",
@@ -74,7 +74,7 @@ class ButterflySpreadsFields:
             "meta": "expirations,field.shortName,field.type,field.description",
         }
         self.short_call_butterfly_fields = {
-            "endpoint": "options/short-call-butterfly-spread",
+            "endpoint": "short_call_butterfly",
             "symbol_param": "baseSymbol",
             "fields": SHORT_CALL_BUTTERFLY_FIELDS,
             "orderBy": "lossProbability",
@@ -88,7 +88,7 @@ class ButterflySpreadsFields:
         }
 
         self.long_put_butterfly_fields = {
-            "endpoint": "options/long-put-butterfly-spread",
+            "endpoint": "long_put_butterfly",
             "symbol_param": "baseSymbol",
             "fields": LONG_PUT_BUTTERFLY_FIELDS,
             "orderBy": "breakEvenProbability",
@@ -102,7 +102,7 @@ class ButterflySpreadsFields:
         }
 
         self.short_put_butterfly_fields = {
-            "endpoint": "options/short-put-butterfly-spread",
+            "endpoint": "short_put_butterfly",
             "symbol_param": "baseSymbol",
             "fields": SHORT_PUT_BUTTERFLY_FIELDS,
             "orderBy": "lossProbability",
@@ -115,7 +115,7 @@ class ButterflySpreadsFields:
             "meta": "expirations,field.shortName,field.type,field.description",
         }
         self.long_iron_butterfly_fields = {
-            "endpoint": "options/long-iron-butterfly-spread",
+            "endpoint": "long_iron_butterfly",
             "symbol_param": "baseSymbol",
             "fields": LONG_IRON_BUTTERFLY_FIELDS,
             "orderBy": "breakEvenProbability",
@@ -128,7 +128,7 @@ class ButterflySpreadsFields:
             "meta": "expirations,field.shortName,field.type,field.description",
         }
         self.short_iron_butterfly_fields = {
-            "endpoint": "options/short-iron-butterfly-spread",
+            "endpoint": "short_iron_butterfly",
             "symbol_param": "baseSymbol",
             "fields": SHORT_IRON_BUTTERFLY_FIELDS,
             "orderBy": "lossProbability",

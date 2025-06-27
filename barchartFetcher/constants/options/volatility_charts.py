@@ -130,7 +130,7 @@ DTE_HISTO_IV_FIELDS = (
 class VolatilityChartsFields:
     def __init__(self):
         self.iv_rank_percentile_fields = {
-            "endpoint": "options-historical",
+            "endpoint": "options_historical",
             "symbol_param": "symbol",
             "fields": IV_RANK_PERCENTILE_FIELDS,
             "limit": 360,
@@ -139,7 +139,7 @@ class VolatilityChartsFields:
         }
 
         self.historical_volatility_fields = {
-            "endpoint": "historical-volatility",
+            "endpoint": "historical_volatility",
             "symbol_param": "symbol",
             "fields": HISTORICAL_VOLATILITY_FIELDS,
             "limit": 999,
@@ -149,7 +149,7 @@ class VolatilityChartsFields:
         }
 
         self.ex_histo_iv_fields = {
-            "endpoint": "options-delta",
+            "endpoint": "options_delta",
             "symbol_param": "symbol",
             "fields": EX_HISTO_IV_FIELDS,
             "expirations": "Example: 2025-06-27,2025-07-03,2025-07-11",
@@ -157,7 +157,7 @@ class VolatilityChartsFields:
         }
 
         self.dte_histo_iv_fields = {
-            "endpoint": "options-delta",
+            "endpoint": "options_delta",
             "symbol_param": "symbol",
             "fields": DTE_HISTO_IV_FIELDS,
             "limit": "999",

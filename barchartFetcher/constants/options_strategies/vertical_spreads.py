@@ -41,7 +41,7 @@ BULL_PUT_SPREADS_FIELDS = (
 class VerticalSpreadsFields:
     def __init__(self):
         self.bull_call_spreads_fields = {
-            "endpoint": "options/bull-calls-spread",
+            "endpoint": "bull_call_spreads",
             "symbol_param": "baseSymbol",
             "fields": BULL_CALL_SPREADS_FIELDS,
             "orderBy": "strikeLeg1",
@@ -55,7 +55,7 @@ class VerticalSpreadsFields:
             "raw": 1,
         }
         self.bear_call_spreads_fields = {
-            "endpoint": "options/bear-calls-spread",
+            "endpoint": "bear_call_spreads",
             "symbol_param": "baseSymbol",
             "fields": BEAR_CALL_SPREADS_FIELDS,
             "orderBy": "strikeLeg1",
@@ -69,7 +69,7 @@ class VerticalSpreadsFields:
             "raw": 1,
         }
         self.bear_put_spreads_fields = {
-            "endpoint": "options/bear-puts-spread",
+            "endpoint": "bear_put_spreads",
             "symbol_param": "baseSymbol",
             "fields": BEAR_PUT_SPREADS_FIELDS,
             "orderBy": "strikeLeg1",
@@ -84,7 +84,7 @@ class VerticalSpreadsFields:
         }
 
         self.bull_put_spreads_fields = {
-            "endpoint": "options/bull-puts-spread",
+            "endpoint": "bull_put_spreads",
             "symbol_param": "baseSymbol",
             "fields": BULL_PUT_SPREADS_FIELDS,
             "orderBy": "strikeLeg1",

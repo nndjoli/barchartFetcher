@@ -8,7 +8,7 @@ EXPIRATIONS_FIELDS = (
 class ExpirationsFields:
     def __init__(self):
         self.expirations_fields = {
-            "endpoint": "options-expirations",
+            "endpoint": "options_expirations",
             "symbol_param": "symbols",
             "fields": EXPIRATIONS_FIELDS,
             "meta": "field.shortName,field.description,field.type",

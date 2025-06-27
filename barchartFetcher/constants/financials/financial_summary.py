@@ -42,14 +42,14 @@ FINANCIAL_SUMMARY_Y_FIELDS = (
 class FinancialSummaryFields:
     def __init__(self):
         self.financial_summary_q_fields = {
-            "endpoint": "quotes",
+            "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": FINANCIAL_SUMMARY_Q_FIELDS,
             "meta": "field.shortName,field.type,field.description",
             "raw": 1,
         }
         self.financial_summary_y_fields = {
-            "endpoint": "quotes",
+            "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": FINANCIAL_SUMMARY_Y_FIELDS,
             "meta": "field.shortName,field.type,field.description",

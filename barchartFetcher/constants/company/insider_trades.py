@@ -9,7 +9,7 @@ INSIDER_TRADES_FIELDS = (
 class InsiderTradesFields:
     def __init__(self):
         self.insider_trades_fields = {
-            "endpoint": "insiderTrades/get",
+            "endpoint": "insider_trades",
             "symbol_param": "eq(symbol|<symbol>)",
             "eq(symbol|<symbol>)": "",
             "orderBy": "transactionDate",

@@ -63,7 +63,7 @@ SHORT_PUT_DIAGONAL_FIELDS = (
 class HorizontalSpreadsFields:
     def __init__(self):
         self.long_call_calendar_fields = {
-            "endpoint": "options/long-call-calendar-spread",
+            "endpoint": "long_call_calendar",
             "symbol_param": "baseSymbol",
             "fields": LONG_CALL_CALENDAR_FIELDS,
             "orderBy": "ivSkew",
@@ -78,7 +78,7 @@ class HorizontalSpreadsFields:
         }
 
         self.long_put_calendar_fields = {
-            "endpoint": "options/long-put-calendar-spread",
+            "endpoint": "long_put_calendar",
             "symbol_param": "baseSymbol",
             "fields": LONG_PUT_CALENDAR_FIELDS,
             "orderBy": "ivSkew",
@@ -93,7 +93,7 @@ class HorizontalSpreadsFields:
         }
 
         self.long_call_diagonal_fields = {
-            "endpoint": "options/bull-calls-diagonal-spread",
+            "endpoint": "long_call_diagonal",
             "symbol_param": "baseSymbol",
             "fields": LONG_CALL_DIAGONAL_FIELDS,
             "orderBy": "ivSkewInverse",
@@ -107,7 +107,7 @@ class HorizontalSpreadsFields:
         }
 
         self.short_call_diagonal_fields = {
-            "endpoint": "options/bear-calls-diagonal-spread",
+            "endpoint": "short_call_diagonal",
             "symbol_param": "baseSymbol",
             "fields": SHORT_CALL_DIAGONAL_FIELDS,
             "orderBy": "ivSkew",
@@ -121,7 +121,7 @@ class HorizontalSpreadsFields:
         }
 
         self.long_put_diagonal_fields = {
-            "endpoint": "options/bull-puts-diagonal-spread",
+            "endpoint": "long_put_diagonal",
             "symbol_param": "baseSymbol",
             "fields": LONG_PUT_DIAGONAL_FIELDS,
             "orderBy": "ivSkew",
@@ -135,7 +135,7 @@ class HorizontalSpreadsFields:
         }
 
         self.short_put_diagonal_fields = {
-            "endpoint": "options/bear-puts-diagonal-spread",
+            "endpoint": "short_put_diagonal",
             "symbol_param": "baseSymbol",
             "fields": SHORT_PUT_DIAGONAL_FIELDS,
             "orderBy": "ivSkewInverse",

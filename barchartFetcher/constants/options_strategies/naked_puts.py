@@ -13,7 +13,7 @@ NAKED_PUTS_FIELDS = (
 class NakedPutsFields:
     def __init__(self):
         self.naked_puts_fields = {
-            "endpoint": "options/naked-puts",
+            "endpoint": "naked_puts",
             "symbol_param": "baseSymbol",
             "fields": NAKED_PUTS_FIELDS,
             "orderBy": "strike",

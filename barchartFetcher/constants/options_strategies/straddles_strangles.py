@@ -42,7 +42,7 @@ SHORT_STRANGLE_FIELDS = (
 class StraddlesStranglesFields:
     def __init__(self):
         self.long_straddle_fields = {
-            "endpoint": "options/long-straddle-spread",
+            "endpoint": "long_straddle",
             "symbol_param": "baseSymbol",
             "fields": LONG_STRADDLE_FIELDS,
             "orderBy": "strikeLeg1",
@@ -56,7 +56,7 @@ class StraddlesStranglesFields:
         }
 
         self.short_straddle_fields = {
-            "endpoint": "options/short-straddle-spread",
+            "endpoint": "short_straddle",
             "symbol_param": "baseSymbol",
             "fields": SHORT_STRADDLE_FIELDS,
             "orderBy": "strikeLeg1",
@@ -70,7 +70,7 @@ class StraddlesStranglesFields:
         }
 
         self.long_strangle_fields = {
-            "endpoint": "options/long-strangle-spread",
+            "endpoint": "long_strangle",
             "symbol_param": "baseSymbol",
             "fields": LONG_STRANGLE_FIELDS,
             "orderBy": "strikeLeg1",
@@ -84,7 +84,7 @@ class StraddlesStranglesFields:
         }
 
         self.short_strangle_fields = {
-            "endpoint": "options/short-strangle-spread",
+            "endpoint": "short_strangle",
             "symbol_param": "baseSymbol",
             "fields": SHORT_STRANGLE_FIELDS,
             "orderBy": "strikeLeg1",
