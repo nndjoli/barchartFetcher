@@ -2,11 +2,11 @@
 OPINION_FIELDS = (
     "opinion,opinionSignal,opinionPercent,opinionStrength,opinionDirection,"
     "opinionChange,opinionPrevious,opinionPreviousSignal,opinionPreviousPercent,"
-    "opinionLastWeek,opinionLastWeekSignal,opinionLastWeekPercent,opinionLastMonth,"
-    "opinionLastMonthSignal,opinionLastMonthPercent,opinionShortTerm,"
-    "opinionShortTermSignal,opinionShortTermPercent,opinionMediumTerm,"
-    "opinionMediumTermSignal,opinionMediumTermPercent,opinionLongTerm,"
-    "opinionLongTermSignal,opinionLongTermPercent"
+    "opinionLastWeek,opinionLastWeekSignal,opinionLastWeekPercent,"
+    "opinionLastMonth,opinionLastMonthSignal,opinionLastMonthPercent,"
+    "opinionShortTerm,opinionShortTermSignal,opinionShortTermPercent,"
+    "opinionMediumTerm,opinionMediumTermSignal,opinionMediumTermPercent,"
+    "opinionLongTerm,opinionLongTermSignal,opinionLongTermPercent"
 )
 
 # Composite Indicator Fields
@@ -17,9 +17,9 @@ COMPOSITE_INDICATOR_FIELDS = (
 # Short Term Indicators Fields
 SHORT_TERM_INDICATORS_FIELDS = (
     "movingAverage20dSignal,movingAverage20dStrength,movingAverage20dDirection,"
-    "macd20to50dSignal,macd20to50dStrength,macd20to50dDirection,macd20to100dSignal,"
-    "macd20to100dStrength,macd20to100dDirection,macd20to200dSignal,"
-    "macd20to200dStrength,macd20to200dDirection"
+    "macd20to50dSignal,macd20to50dStrength,macd20to50dDirection,"
+    "macd20to100dSignal,macd20to100dStrength,macd20to100dDirection,"
+    "macd20to200dSignal,macd20to200dStrength,macd20to200dDirection"
 )
 
 # Medium Term Indicators Fields
@@ -32,18 +32,49 @@ MEDIUM_TERM_INDICATORS_FIELDS = (
 
 # Long Term Indicators Fields
 LONG_TERM_INDICATORS_FIELDS = (
-    "movingAverage100dSignal,movingAverage100dStrength,movingAverage100dDirection,"
-    "movingAverage150dSignal,movingAverage150dStrength,movingAverage150dDirection,"
-    "movingAverage200dSignal,movingAverage200dStrength,movingAverage200dDirection,"
-    "macd100to200dSignal,macd100to200dStrength,macd100to200dDirection"
+    "movingAverage100dSignal,movingAverage100dStrength,"
+    "movingAverage100dDirection,movingAverage150dSignal,"
+    "movingAverage150dStrength,movingAverage150dDirection,"
+    "movingAverage200dSignal,movingAverage200dStrength,"
+    "movingAverage200dDirection,macd100to200dSignal,macd100to200dStrength,"
+    "macd100to200dDirection"
 )
 
 
 class OpinionFields:
-
     def __init__(self):
-        self.fields = OPINION_FIELDS
-        self.composite_indicator_fields = COMPOSITE_INDICATOR_FIELDS
-        self.short_term_indicators_fields = SHORT_TERM_INDICATORS_FIELDS
-        self.medium_term_indicators_fields = MEDIUM_TERM_INDICATORS_FIELDS
-        self.long_term_indicators_fields = LONG_TERM_INDICATORS_FIELDS
+        self.opinion_fields = {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": OPINION_FIELDS,
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1,
+        }
+        self.composite_indicator_fields = {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": COMPOSITE_INDICATOR_FIELDS,
+            "meta": "field.shortName,fields.description,field.type",
+            "raw": 1,
+        }
+        self.short_term_indicators_fields = {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": SHORT_TERM_INDICATORS_FIELDS,
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1,
+        }
+        self.medium_term_indicators_fields = {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": MEDIUM_TERM_INDICATORS_FIELDS,
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1,
+        }
+        self.long_term_indicators_fields = {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": LONG_TERM_INDICATORS_FIELDS,
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1,
+        }
