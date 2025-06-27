@@ -3,10 +3,9 @@ LONG_CALL_CONDOR_FIELDS = (
     "askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,"
     "askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,"
     "lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,"
-    "impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,"
-    "timeCode,dividendExDate,historicVolatility30d,averageVolatility,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType,"
-    "&orderBy=breakEvenProbability&orderDir=desc"
+    "impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,timeCode,"
+    "dividendExDate,historicVolatility30d,averageVolatility,"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 SHORT_CALL_CONDOR_FIELDS = (
@@ -16,8 +15,7 @@ SHORT_CALL_CONDOR_FIELDS = (
     "lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,"
     "impliedVolatilityRank1y,lossProbability,baseNextEarningsDate,timeCode,"
     "dividendExDate,historicVolatility30d,averageVolatility,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType,"
-    "&orderBy=lossProbability&orderDir=asc"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 LONG_PUT_CONDOR_FIELDS = (
@@ -25,10 +23,9 @@ LONG_PUT_CONDOR_FIELDS = (
     "askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,"
     "askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,"
     "lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,"
-    "impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,"
-    "timeCode,dividendExDate,historicVolatility30d,averageVolatility,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType,"
-    "&orderBy=breakEvenProbability&orderDir=desc"
+    "impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,timeCode,"
+    "dividendExDate,historicVolatility30d,averageVolatility,"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 SHORT_PUT_CONDOR_FIELDS = (
@@ -38,8 +35,7 @@ SHORT_PUT_CONDOR_FIELDS = (
     "lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,"
     "impliedVolatilityRank1y,lossProbability,baseNextEarningsDate,timeCode,"
     "dividendExDate,historicVolatility30d,averageVolatility,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType,"
-    "&orderBy=lossProbability&orderDir=asc"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 LONG_IRON_CONDOR_FIELDS = (
@@ -47,10 +43,9 @@ LONG_IRON_CONDOR_FIELDS = (
     "bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,askPriceLeg3,strikeLeg4,"
     "bidPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,"
     "lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,"
-    "impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,"
-    "timeCode,dividendExDate,historicVolatility30d,averageVolatility,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType,"
-    "&orderBy=breakEvenProbability&orderDir=desc"
+    "impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,timeCode,"
+    "dividendExDate,historicVolatility30d,averageVolatility,"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 SHORT_IRON_CONDOR_FIELDS = (
@@ -60,26 +55,92 @@ SHORT_IRON_CONDOR_FIELDS = (
     "lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,"
     "impliedVolatilityRank1y,lossProbability,baseNextEarningsDate,timeCode,"
     "dividendExDate,historicVolatility30d,averageVolatility,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType,"
-    "&orderBy=lossProbability&orderDir=asc"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 
 class CondorFields:
     def __init__(self):
-        self.long_call_condor_fields = LONG_CALL_CONDOR_FIELDS
-        self.short_call_condor_fields = SHORT_CALL_CONDOR_FIELDS
-        self.long_put_condor_fields = LONG_PUT_CONDOR_FIELDS
-        self.short_put_condor_fields = SHORT_PUT_CONDOR_FIELDS
-        self.long_iron_condor_fields = LONG_IRON_CONDOR_FIELDS
-        self.short_iron_condor_fields = SHORT_IRON_CONDOR_FIELDS
-        self.additional_infos = """
-            Each condor strategy has its own endpoint/ fields combination;
-            Add symbol field via `baseSymbol`;
-            meta: expirations,field.shortName,field.type,field.description;
-            expirationDate: 'nearest' (default_value);
-            expirationType: 'weekly' (default_value);
-            page: 1 (default_value);
-            pageSize: 100 (default_value);
-            raw: 1
-        """
+        self.long_call_condor_fields = {
+            "endpoint": "options/long-call-condors",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_CALL_CONDOR_FIELDS,
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
+
+        self.short_call_condor_fields = {
+            "endpoint": "options/short-call-condors",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_CALL_CONDOR_FIELDS,
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
+
+        self.long_put_condor_fields = {
+            "endpoint": "options/long-put-condors",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_PUT_CONDOR_FIELDS,
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
+
+        self.short_put_condor_fields = {
+            "endpoint": "options/short-put-condors",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_PUT_CONDOR_FIELDS,
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
+
+        self.long_iron_condor_fields = {
+            "endpoint": "options/long-condors",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_IRON_CONDOR_FIELDS,
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
+
+        self.short_iron_condor_fields = {
+            "endpoint": "options/short-condors",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_IRON_CONDOR_FIELDS,
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
