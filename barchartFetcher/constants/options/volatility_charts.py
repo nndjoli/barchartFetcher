@@ -1,7 +1,7 @@
 # IV Rank Percentile Fields:
 IV_RANK_PERCENTILE_FIELDS = (
-    "impliedVolatilityRank1y,impliedVolatilityPercentile1y,"
-    "totalVolume,totalOpenInterest,historicalLastPrice,date"
+    "impliedVolatilityRank1y,impliedVolatilityPercentile1y,totalVolume,"
+    "totalOpenInterest,historicalLastPrice,date"
 )
 
 # Historical Volatility Fields:
@@ -129,7 +129,38 @@ DTE_HISTO_IV_FIELDS = (
 
 class VolatilityChartsFields:
     def __init__(self):
-        self.iv_rank_percentile_fields = IV_RANK_PERCENTILE_FIELDS
-        self.historical_volatility_fields = HISTORICAL_VOLATILITY_FIELDS
-        self.ex_histo_iv_fields = EX_HISTO_IV_FIELDS
-        self.dte_histo_iv_fields = DTE_HISTO_IV_FIELDS
+        self.iv_rank_percentile_fields = {
+            "endpoint": "options-historical",
+            "symbol_param": "symbol",
+            "fields": IV_RANK_PERCENTILE_FIELDS,
+            "limit": 360,
+            "orderBy": "date",
+            "orderDir": "desc",
+        }
+
+        self.historical_volatility_fields = {
+            "endpoint": "historical-volatility",
+            "symbol_param": "symbol",
+            "fields": HISTORICAL_VOLATILITY_FIELDS,
+            "limit": 999,
+            "period": "30",
+            "orderBy": "tradeTime",
+            "orderDir": "desc",
+        }
+
+        self.ex_histo_iv_fields = {
+            "endpoint": "options-delta",
+            "symbol_param": "symbol",
+            "fields": EX_HISTO_IV_FIELDS,
+            "expirations": "Example: 2025-06-27,2025-07-03,2025-07-11",
+            "eq(date,latest)": "",
+        }
+
+        self.dte_histo_iv_fields = {
+            "endpoint": "options-delta",
+            "symbol_param": "symbol",
+            "fields": DTE_HISTO_IV_FIELDS,
+            "limit": "999",
+            "orderBy": "date",
+            "orderDir": "desc",
+        }
