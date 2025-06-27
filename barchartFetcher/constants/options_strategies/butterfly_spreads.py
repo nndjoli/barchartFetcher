@@ -1,12 +1,10 @@
 LONG_CALL_BUTTERFLY_FIELDS = (
-    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,"
-    "askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,"
-    "upperBreakEven,upperBreakEvenPercent,lowerBreakEven,"
-    "lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,"
-    "breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,"
-    "dividendExDate,historicVolatility30d,impliedVolatilityRank1y,"
-    "averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,"
-    "symbolCode,symbolType&orderBy=breakEvenProbability&orderDir=desc"
+    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,"
+    "strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,upperBreakEven,"
+    "upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,"
+    "riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,"
+    "dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 SHORT_CALL_BUTTERFLY_FIELDS = (
@@ -17,7 +15,6 @@ SHORT_CALL_BUTTERFLY_FIELDS = (
     "lossProbability,baseNextEarningsDate,timeCode,dividendExDate,"
     "historicVolatility30d,impliedVolatilityRank1y,averageVolatility,"
     "baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType"
-    "&orderBy=lossProbability&orderDir=asc"
 )
 
 LONG_PUT_BUTTERFLY_FIELDS = (
@@ -27,7 +24,7 @@ LONG_PUT_BUTTERFLY_FIELDS = (
     "maxLoss,riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,"
     "timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,"
     "averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,"
-    "symbolType&orderBy=breakEvenProbability&orderDir=desc"
+    "symbolType"
 )
 
 SHORT_PUT_BUTTERFLY_FIELDS = (
@@ -37,7 +34,7 @@ SHORT_PUT_BUTTERFLY_FIELDS = (
     "maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,"
     "timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,"
     "averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,"
-    "symbolCode,symbolType&orderBy=lossProbability&orderDir=asc"
+    "symbolCode,symbolType"
 )
 
 LONG_IRON_BUTTERFLY_FIELDS = (
@@ -47,7 +44,7 @@ LONG_IRON_BUTTERFLY_FIELDS = (
     "maxProfit,maxLoss,riskRewardRatio,breakEvenProbability,baseNextEarningsDate,"
     "timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,"
     "averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,"
-    "symbolType&orderBy=breakEvenProbability&orderDir=desc"
+    "symbolType"
 )
 
 SHORT_IRON_BUTTERFLY_FIELDS = (
@@ -57,24 +54,89 @@ SHORT_IRON_BUTTERFLY_FIELDS = (
     "maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,"
     "baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,"
     "impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,"
-    "baseTrendSpotterStrength,symbolCode,symbolType&orderBy=lossProbability&orderDir=asc"
+    "baseTrendSpotterStrength,symbolCode,symbolType"
 )
 
 
 class ButterflySpreadsFields:
     def __init__(self):
-        self.long_call_butterfly_fields = LONG_CALL_BUTTERFLY_FIELDS
-        self.short_call_butterfly_fields = SHORT_CALL_BUTTERFLY_FIELDS
-        self.long_put_butterfly_fields = LONG_PUT_BUTTERFLY_FIELDS
-        self.short_put_butterfly_fields = SHORT_PUT_BUTTERFLY_FIELDS
-        self.long_iron_butterfly_fields = LONG_IRON_BUTTERFLY_FIELDS
-        self.short_iron_butterfly_fields = SHORT_IRON_BUTTERFLY_FIELDS
-        self.additional_infos = """
-            Add symbol via `baseSymbol`;
-            meta: expirations,field.shortName,field.type,field.description;
-            expirationDate: "nearest" (default_value)
-            expirationType: "weekly" (default_value)
-            page: 1 (default_value)
-            limit: 100 (default_value)
-            raw: 1 (default_value)
-        """
+        self.long_call_butterfly_fields = {
+            "endpoint": "options/long-call-butterfly-spread",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_CALL_BUTTERFLY_FIELDS,
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description",
+        }
+        self.short_call_butterfly_fields = {
+            "endpoint": "options/short-call-butterfly-spread",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_CALL_BUTTERFLY_FIELDS,
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description",
+        }
+
+        self.long_put_butterfly_fields = {
+            "endpoint": "options/long-put-butterfly-spread",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_PUT_BUTTERFLY_FIELDS,
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description",
+        }
+
+        self.short_put_butterfly_fields = {
+            "endpoint": "options/short-put-butterfly-spread",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_PUT_BUTTERFLY_FIELDS,
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description",
+        }
+        self.long_iron_butterfly_fields = {
+            "endpoint": "options/long-iron-butterfly-spread",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_IRON_BUTTERFLY_FIELDS,
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description",
+        }
+        self.short_iron_butterfly_fields = {
+            "endpoint": "options/short-iron-butterfly-spread",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_IRON_BUTTERFLY_FIELDS,
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",  # or "monthly"
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description",
+        }
