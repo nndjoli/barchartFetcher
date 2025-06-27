@@ -6,32 +6,46 @@ MARRIED_PUTS_FIELDS = (
     "symbolCode,symbolType,expirationType,daysToExpiration,"
     "impliedVolatilityRank1y,baseNextEarningsDate,timeCode,dividendExDate,"
     "historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,"
-    "averageVolatility&orderBy=strikePrice&orderDir=asc"
+    "averageVolatility"
 )
 
 LONG_COLLAR_SPREAD_FIELDS = (
     "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDate,"
-    "daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,"
-    "breakEven,netDebitCredit,percentOfCost,maxProfit,maxLoss,maxRisk,"
-    "upside,downside,overallDelta,breakEvenProbability,symbolCode,"
-    "symbolType,expirationType,legs,daysToExpiration,averageVolatility,"
-    "baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,"
-    "impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength"
-    "&orderBy=strikeLeg1&orderDir=asc"
+    "daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,"
+    "netDebitCredit,percentOfCost,maxProfit,maxLoss,maxRisk,upside,downside,"
+    "overallDelta,breakEvenProbability,symbolCode,symbolType,expirationType,"
+    "legs,daysToExpiration,averageVolatility,baseNextEarningsDate,timeCode,"
+    "dividendExDate,historicVolatility30d,impliedVolatilityRank1y,"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength"
 )
 
 
 class ProtectionStrategiesFields:
     def __init__(self):
-        self.married_puts_fields = MARRIED_PUTS_FIELDS
-        self.long_collar_spread_fields = LONG_COLLAR_SPREAD_FIELDS
-        self.additional_infos = """
-            Each strategy has its own endpoint:
-            - Married Puts: "married_puts"
-            - Long Collar Spread: "long_collar_spread"
+        self.married_puts_fields = {
+            "endpoint": "options/married-put",
+            "symbol_param": "baseSymbol",
+            "fields": MARRIED_PUTS_FIELDS,
+            "orderBy": "strikePrice",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
 
-            Pass symbol via `baseSymbol`;
-            Default `meta` = "expirations,field.shortName,field.type,field.description"
-            Default `raw` = 1
-            Optional: [expirationDate(default="nearest"), expirationType(default="weekly"), page(default=1), limit(default=100)] parameters
-        """
+        self.long_collar_spread_fields = {
+            "endpoint": "options/long-collar-spread",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_COLLAR_SPREAD_FIELDS,
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }

@@ -1,55 +1,98 @@
 LONG_STRADDLE_FIELDS = (
-    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,"
-    "askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,"
-    "netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,"
-    "breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,"
-    "symbolType&orderBy=strikeLeg1&orderDir=asc"
+    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,"
+    "askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,"
+    "lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,"
+    "impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,"
+    "breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,"
+    "historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,"
+    "averageVolatility,symbolCode,symbolType"
 )
 
 SHORT_STRADDLE_FIELDS = (
-    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,"
-    "bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,"
-    "netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,"
-    "lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType"
-    "&orderBy=strikeLeg1&orderDir=asc"
+    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,"
+    "bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,"
+    "lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,"
+    "impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,"
+    "baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,"
+    "baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,"
+    "symbolCode,symbolType"
 )
 
 LONG_STRANGLE_FIELDS = (
-    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,"
-    "askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,"
-    "netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,"
-    "breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,"
-    "baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType"
-    "&orderBy=strikeLeg1&orderDir=asc"
+    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,"
+    "askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,"
+    "lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,"
+    "impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,"
+    "breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,"
+    "historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,"
+    "averageVolatility,symbolCode,symbolType"
 )
 
 SHORT_STRANGLE_FIELDS = (
-    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,"
-    "bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,"
-    "netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,"
-    "lossProbability,maxProfitProbability,baseNextEarningsDate,timeCode,dividendExDate,"
-    "historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,"
-    "symbolCode,symbolType&orderBy=strikeLeg1&orderDir=asc"
+    "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,"
+    "bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,"
+    "lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,"
+    "impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,"
+    "maxProfitProbability,baseNextEarningsDate,timeCode,dividendExDate,"
+    "historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,"
+    "averageVolatility,symbolCode,symbolType"
 )
 
 
 class StraddlesStranglesFields:
     def __init__(self):
-        self.long_straddle_fields = LONG_STRADDLE_FIELDS
-        self.short_straddle_fields = SHORT_STRADDLE_FIELDS
-        self.long_strangle_fields = LONG_STRANGLE_FIELDS
-        self.short_strangle_fields = SHORT_STRANGLE_FIELDS
-        self.additional_infos = """
-            Each strategy has its own endpoint:
-            - Long Straddle: "long_straddle"
-            - Short Straddle: "short_straddle"
-            - Long Strangle: "long_strangle"
-            - Short Strangle: "short_strangle"
+        self.long_straddle_fields = {
+            "endpoint": "options/long-straddle-spread",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_STRADDLE_FIELDS,
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
 
-            Pass symbol via `baseSymbol`;
-            Default `meta` = "expirations,field.shortName,field.type,field.description"
-            Default `raw` = 1
-            Optional: [expirationDate(default="nearest"), expirationType(default="weekly"), page(default=1), limit(default=100)] parameters
-        """
+        self.short_straddle_fields = {
+            "endpoint": "options/short-straddle-spread",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_STRADDLE_FIELDS,
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
+
+        self.long_strangle_fields = {
+            "endpoint": "options/long-strangle-spread",
+            "symbol_param": "baseSymbol",
+            "fields": LONG_STRANGLE_FIELDS,
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
+
+        self.short_strangle_fields = {
+            "endpoint": "options/short-strangle-spread",
+            "symbol_param": "baseSymbol",
+            "fields": SHORT_STRANGLE_FIELDS,
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "Example: 2025-06-27",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+        }
