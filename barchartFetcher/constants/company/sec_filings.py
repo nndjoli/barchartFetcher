@@ -1,12 +1,14 @@
-SEC_FILINGS_FIELDS = "date,formName,description,htmlUrl,wordUrl,pdfUrl,excelUrl&transactions=1"
+SEC_FILINGS_FIELDS = (
+    "date,formName,description,htmlUrl,wordUrl,pdfUrl,excelUrl"
+)
 
 
 class SECFilingsFields:
     def __init__(self):
-        self.sec_filings_fields = SEC_FILINGS_FIELDS
-        self.additional_infos = print(
-            """
-            Add symbol field via `symbol`;
-            limit: 20 (default_value);
-            """
-        )
+        self.sec_filings_fields = {
+            "endpoint": "sec-filings/get",
+            "symbol_param": "symbol",
+            "fields": SEC_FILINGS_FIELDS,
+            "transactions": "1",
+            "limit": "20",
+        }
