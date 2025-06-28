@@ -46,8 +46,6 @@ def sync_query(
         with httpx.Client(
             headers=headers, cookies=cookies, timeout=30.0
         ) as client:
-            client = httpx.Client()
-
             if method.upper() == "POST":
                 response = client.post(url, headers=headers, cookies=cookies)
             else:
