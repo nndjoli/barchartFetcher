@@ -18,7 +18,7 @@ class CoveredCallsFields:
             "fields": COVERED_CALLS_FIELDS,
             "orderBy": "strike",
             "orderDir": "desc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "meta": "expirations,field.shortName,field.type,field.description",
             "ge(tradeTime,previousTradingDay)": "",
             "between(delta,0.1,0.6)": "",

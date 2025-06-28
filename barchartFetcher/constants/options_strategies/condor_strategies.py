@@ -67,7 +67,7 @@ class CondorFields:
             "fields": LONG_CALL_CONDOR_FIELDS,
             "orderBy": "breakEvenProbability",
             "orderDir": "desc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "meta": "expirations,field.shortName,field.type,field.description",
             "page": 1,
@@ -81,7 +81,7 @@ class CondorFields:
             "fields": SHORT_CALL_CONDOR_FIELDS,
             "orderBy": "lossProbability",
             "orderDir": "asc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "meta": "expirations,field.shortName,field.type,field.description",
             "page": 1,
@@ -95,7 +95,7 @@ class CondorFields:
             "fields": LONG_PUT_CONDOR_FIELDS,
             "orderBy": "breakEvenProbability",
             "orderDir": "desc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "meta": "expirations,field.shortName,field.type,field.description",
             "page": 1,
@@ -109,7 +109,7 @@ class CondorFields:
             "fields": SHORT_PUT_CONDOR_FIELDS,
             "orderBy": "lossProbability",
             "orderDir": "asc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "meta": "expirations,field.shortName,field.type,field.description",
             "page": 1,
@@ -123,7 +123,7 @@ class CondorFields:
             "fields": LONG_IRON_CONDOR_FIELDS,
             "orderBy": "breakEvenProbability",
             "orderDir": "desc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "meta": "expirations,field.shortName,field.type,field.description",
             "page": 1,
@@ -137,7 +137,7 @@ class CondorFields:
             "fields": SHORT_IRON_CONDOR_FIELDS,
             "orderBy": "lossProbability",
             "orderDir": "asc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "meta": "expirations,field.shortName,field.type,field.description",
             "page": 1,

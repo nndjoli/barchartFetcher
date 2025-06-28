@@ -66,7 +66,7 @@ class ButterflySpreadsFields:
             "fields": LONG_CALL_BUTTERFLY_FIELDS,
             "orderBy": "breakEvenProbability",
             "orderDir": "desc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "page": 1,
             "limit": 100,
@@ -79,7 +79,7 @@ class ButterflySpreadsFields:
             "fields": SHORT_CALL_BUTTERFLY_FIELDS,
             "orderBy": "lossProbability",
             "orderDir": "asc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "page": 1,
             "limit": 100,
@@ -93,7 +93,7 @@ class ButterflySpreadsFields:
             "fields": LONG_PUT_BUTTERFLY_FIELDS,
             "orderBy": "breakEvenProbability",
             "orderDir": "desc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "page": 1,
             "limit": 100,
@@ -107,7 +107,7 @@ class ButterflySpreadsFields:
             "fields": SHORT_PUT_BUTTERFLY_FIELDS,
             "orderBy": "lossProbability",
             "orderDir": "asc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "page": 1,
             "limit": 100,
@@ -120,7 +120,7 @@ class ButterflySpreadsFields:
             "fields": LONG_IRON_BUTTERFLY_FIELDS,
             "orderBy": "breakEvenProbability",
             "orderDir": "desc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "page": 1,
             "limit": 100,
@@ -133,7 +133,7 @@ class ButterflySpreadsFields:
             "fields": SHORT_IRON_BUTTERFLY_FIELDS,
             "orderBy": "lossProbability",
             "orderDir": "asc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "expirationType": "weekly",  # or "monthly"
             "page": 1,
             "limit": 100,

@@ -18,7 +18,7 @@ class NakedPutsFields:
             "fields": NAKED_PUTS_FIELDS,
             "orderBy": "strike",
             "orderDir": "asc",
-            "expirationDate": "Example: 2025-06-27",
+            "expirationDate": "<expiration_date>",
             "meta": "expirations,field.shortName,field.type,field.description",
             "between(delta,-0.6,-0.1)": "",
             "expirationType": "weekly",
