@@ -8,8 +8,8 @@ def naked_puts(
     baseSymbol: str = "AAPL",
     orderBy: str = "strike",
     orderDir: str = "asc",
-    expirationDate: str = "<expiration_date>",
-    expirationType: str = "weekly",
+    expirationDate=None,
+    expirationType=None,
     page: str = "1",
     raw: str = "1",
 ) -> str:
@@ -22,12 +22,15 @@ def naked_puts(
         "baseSymbol": baseSymbol,
         "orderBy": orderBy,
         "orderDir": orderDir,
-        "expirationDate": expirationDate,
-        "expirationType": expirationType,
         "page": page,
         "raw": raw,
         "fields": "symbol,symbolType,symbolCode,baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,bidPrice,breakEvenBid,percentToBreakEvenBid,volume,openInterest,impliedVolatilityRank1y,delta,potentialReturn,potentialReturnAnnual,breakEvenProbability,tradeTime,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
+    if expirationDate:
+        params["expirationDate"] = expirationDate
+    if expirationType:
+        params["expirationType"] = expirationType
+
     query = urlencode(params)
     return base_url + "?" + query

@@ -6,8 +6,8 @@ def long_collar_spread(
     baseSymbol: str = "AAPL",
     orderBy: str = "strikeLeg1",
     orderDir: str = "asc",
-    expirationDate: str = "<expiration_date>",
-    expirationType: str = "weekly",
+    expirationDate=None,
+    expirationType=None,
     page: str = "1",
     limit: str = "100",
     raw: str = "1",
@@ -26,6 +26,10 @@ def long_collar_spread(
         "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,netDebitCredit,percentOfCost,maxProfit,maxLoss,maxRisk,upside,downside,overallDelta,breakEvenProbability,symbolCode,symbolType,expirationType,legs,daysToExpiration,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
+    if expirationDate:
+        params["expirationDate"] = expirationDate
+    if expirationType:
+        params["expirationType"] = expirationType
     query = urlencode(params)
     return base_url + "?" + query
 
@@ -34,8 +38,8 @@ def married_puts(
     baseSymbol: str = "AAPL",
     orderBy: str = "strikePrice",
     orderDir: str = "asc",
-    expirationDate: str = "<expiration_date>",
-    expirationType: str = "weekly",
+    expirationDate=None,
+    expirationType=None,
     page: str = "1",
     limit: str = "100",
     raw: str = "1",
@@ -56,5 +60,10 @@ def married_puts(
         "fields": "baseSymbol,baseSymbolType,symbol,underlyingLastPrice,expirationDate,daysToExpiration,strike,strikePrice,moneyness,askPrice,breakEvenAsk,breakEvenPercentAsk,maxRisk,downside,volume,openInterest,impliedVolatilityRank1y,overallDelta,breakEvenProbability,tradeTime,symbolCode,symbolType,expirationType,daysToExpiration,impliedVolatilityRank1y,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
+    if expirationDate:
+        params["expirationDate"] = expirationDate
+    if expirationType:
+        params["expirationType"] = expirationType
+
     query = urlencode(params)
     return base_url + "?" + query
