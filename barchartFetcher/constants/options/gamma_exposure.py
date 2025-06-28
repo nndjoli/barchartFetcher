@@ -12,7 +12,7 @@ class GEXFields:
             "endpoint": "options",
             "symbol_param": "symbols",
             "fields": GAMMA_EXPOSURE_FIELDS,
-            "expirations": "Example: 2025-06-27,2025-07-03",
+            "expirations": "<expirations>",
             "groupBy": "strikePrice",
             "le(nearestToLast,100)": "",
         }
