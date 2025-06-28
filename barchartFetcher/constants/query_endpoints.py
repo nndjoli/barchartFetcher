@@ -7,7 +7,7 @@ class QueryEndpoints:
         self.historical = (
             "https://www.barchart.com/proxies/core-api/v1/historical/get?"
         )
-        self.historical_volatility = "https://www.barchart.com/proxies/core-api/v1/historical-volatility/get?"
+        self.historical_volatility = "https://www.barchart.com/proxies/core-api/v1/historical-volatility?"
 
         # Options Endpoints
         self.options = (
