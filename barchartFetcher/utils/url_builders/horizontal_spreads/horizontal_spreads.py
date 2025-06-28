@@ -8,9 +8,9 @@ def long_call_calendar(
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_call_calendar"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/long-call-calendar-spread"
@@ -39,9 +39,9 @@ def long_call_diagonal(
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_call_diagonal"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/bull-calls-diagonal-spread"
@@ -49,8 +49,6 @@ def long_call_diagonal(
         "baseSymbol": baseSymbol,
         "orderBy": orderBy,
         "orderDir": orderDir,
-        "expirationDate": expirationDate,
-        "expirationType": expirationType,
         "page": page,
         "limit": limit,
         "raw": raw,
@@ -72,9 +70,9 @@ def long_put_calendar(
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_put_calendar"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/long-put-calendar-spread"
@@ -103,9 +101,9 @@ def long_put_diagonal(
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_put_diagonal"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/bull-puts-diagonal-spread"
@@ -133,9 +131,9 @@ def short_call_diagonal(
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for short_call_diagonal"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/bear-calls-diagonal-spread"
@@ -143,8 +141,6 @@ def short_call_diagonal(
         "baseSymbol": baseSymbol,
         "orderBy": orderBy,
         "orderDir": orderDir,
-        "expirationDate": expirationDate,
-        "expirationType": expirationType,
         "page": page,
         "limit": limit,
         "raw": raw,
@@ -166,9 +162,9 @@ def short_put_diagonal(
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for short_put_diagonal"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/bear-puts-diagonal-spread"

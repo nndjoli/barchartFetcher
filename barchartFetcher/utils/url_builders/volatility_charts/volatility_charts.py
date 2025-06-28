@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 
 def dte_histo_iv(
     symbol: str = "AAPL",
-    limit: str = "999",
+    limit: int = 999,
     orderBy: str = "date",
     orderDir: str = "desc",
     groupBy: str = "date",
@@ -43,11 +43,11 @@ def ex_histo_iv(
 
 def historical_volatility(
     symbols: str = "AAPL",
-    limit: str = "999",
-    period: str = "30",
+    limit: int = 999,
+    period: int = 30,
     orderBy: str = "tradeTime",
     orderDir: str = "desc",
-    raw: str = "1",
+    raw: int = 1,
 ) -> str:
     """URL builder for historical_volatility"""
     base_url = (
@@ -68,10 +68,10 @@ def historical_volatility(
 
 def iv_rank_percentile(
     symbol: str = "AAPL",
-    limit: str = "360",
+    limit: int = 360,
     orderBy: str = "date",
     orderDir: str = "desc",
-    raw: str = "1",
+    raw: int = 1,
 ) -> str:
     """URL builder for iv_rank_percentile"""
     base_url = (

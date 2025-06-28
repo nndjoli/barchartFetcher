@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 
 def max_pain_vol_skew(
     symbols: str = "AAPL",
-    raw: str = "1",
+    raw: int = 1,
     expirations=None,
     groupBy: str = "expirationDate",
     max_strike_spot_distance: int = 40,

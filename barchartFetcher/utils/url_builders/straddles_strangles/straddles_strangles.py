@@ -8,9 +8,9 @@ def long_straddle(
     orderDir: str = "asc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_straddle"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/long-straddle-spread"
@@ -38,9 +38,9 @@ def long_strangle(
     orderDir: str = "asc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_strangle"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/long-strangle-spread"
@@ -69,9 +69,9 @@ def short_straddle(
     orderDir: str = "asc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for short_straddle"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/short-straddle-spread"
@@ -100,9 +100,9 @@ def short_strangle(
     orderDir: str = "asc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for short_strangle"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/short-strangle-spread"

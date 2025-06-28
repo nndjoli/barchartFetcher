@@ -4,15 +4,15 @@ from urllib.parse import urlencode
 
 def long_call(
     baseSymbol: str = "AAPL",
-    delta_low: str = "0.2",
-    delta_high: str = "0.9",
+    delta_low: int | float = 0.2,
+    delta_high: int | float = 0.9,
     orderBy: str = "strikePrice",
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_call"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/get"
@@ -46,9 +46,9 @@ def long_put(
     orderDir: str = "desc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_put"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/get"

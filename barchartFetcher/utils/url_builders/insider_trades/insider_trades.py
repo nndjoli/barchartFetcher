@@ -6,9 +6,9 @@ def insider_trades(
     symbol: str,
     orderBy: str = "transactionDate",
     orderDir: str = "desc",
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for insider_trades"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/insiderTrades/get"

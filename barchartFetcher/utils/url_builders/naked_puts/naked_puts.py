@@ -10,8 +10,8 @@ def naked_puts(
     orderDir: str = "asc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    raw: str = "1",
+    page: int = 1,
+    raw: int = 1,
 ) -> str:
     """URL builder for naked_puts"""
     base_url = (

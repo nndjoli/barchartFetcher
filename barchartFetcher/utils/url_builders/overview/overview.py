@@ -2,7 +2,7 @@
 from urllib.parse import urlencode
 
 
-def analyst_rating(symbols: str = "AAPL", raw: str = "1") -> str:
+def analyst_rating(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for analyst_rating"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -15,7 +15,7 @@ def analyst_rating(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def fundamentals(symbols: str = "AAPL", raw: str = "1") -> str:
+def fundamentals(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for fundamentals"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -28,7 +28,7 @@ def fundamentals(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def options_overview(symbols: str = "AAPL", raw: str = "1") -> str:
+def options_overview(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for options_overview"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -41,7 +41,7 @@ def options_overview(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def price_performance(symbols: str = "AAPL", raw: str = "1") -> str:
+def price_performance(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for price_performance"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -54,7 +54,7 @@ def price_performance(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def quote(symbols: str = "AAPL", raw: str = "1") -> str:
+def quote(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for quote"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -67,7 +67,7 @@ def quote(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def technical_opinion(symbols: str = "AAPL", raw: str = "1") -> str:
+def technical_opinion(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for technical_opinion"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {

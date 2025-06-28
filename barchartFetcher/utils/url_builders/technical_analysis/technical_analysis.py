@@ -2,7 +2,7 @@
 from urllib.parse import urlencode
 
 
-def moving_averages(symbols: str = "AAPL", raw: str = "1") -> str:
+def moving_averages(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for moving_averages"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -15,7 +15,7 @@ def moving_averages(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def stochastics(symbols: str = "AAPL", raw: str = "1") -> str:
+def stochastics(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for stochastics"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -28,7 +28,7 @@ def stochastics(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def strength(symbols: str = "AAPL", raw: str = "1") -> str:
+def strength(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for strength"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {

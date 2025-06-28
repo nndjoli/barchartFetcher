@@ -2,7 +2,7 @@
 from urllib.parse import urlencode
 
 
-def lows_highs(symbols: str = "AAPL", raw: str = "1") -> str:
+def lows_highs(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for lows_highs"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -15,7 +15,7 @@ def lows_highs(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def past_5d(symbols: str = "AAPL", raw: str = "1") -> str:
+def past_5d(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for past_5d"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -28,7 +28,7 @@ def past_5d(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def past_5m(symbols: str = "AAPL", raw: str = "1") -> str:
+def past_5m(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for past_5m"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -41,7 +41,7 @@ def past_5m(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def past_5w(symbols: str = "AAPL", raw: str = "1") -> str:
+def past_5w(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for past_5w"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -54,7 +54,7 @@ def past_5w(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def price_perf(symbols: str = "AAPL", raw: str = "1") -> str:
+def price_perf(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for price_perf"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {

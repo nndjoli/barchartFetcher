@@ -4,14 +4,14 @@ from urllib.parse import urlencode
 
 def covered_calls(
     baseSymbol: str = "AAPL",
-    delta_low: str = "0.1",
-    delta_high: str = "0.6",
-    expirationDate: str = "<expiration_date>",
-    expirationType: str = "weekly",
+    delta_low: int | float = 0.1,
+    delta_high: int | float = 0.6,
+    expirationDate=None,
+    expirationType=None,
     orderBy: str = "strike",
     orderDir: str = "desc",
-    page: str = "1",
-    raw: str = "1",
+    page: int = 1,
+    raw: int = 1,
 ) -> str:
     """URL builder for covered_calls"""
     base_url = (

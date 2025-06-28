@@ -21,9 +21,9 @@ def expected_move(
     symbol: str = "AAPL",
     orderBy: str = "expirationDate",
     orderDir: str = "asc",
-    raw: str = "1",
-    page: str = "1",
-    limit: str = "100",
+    raw: int = 1,
+    page: int = 1,
+    limit: int = 100,
 ) -> str:
     """URL builder for expected_move"""
     base_url = (

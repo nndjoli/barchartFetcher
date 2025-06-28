@@ -2,7 +2,7 @@
 from urllib.parse import urlencode
 
 
-def financial_summary_q(symbols: str = "AAPL", raw: str = "1") -> str:
+def financial_summary_q(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for financial_summary_q"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -15,7 +15,7 @@ def financial_summary_q(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def financial_summary_y(symbols: str = "AAPL", raw: str = "1") -> str:
+def financial_summary_y(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for financial_summary_y"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {

@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 
 def bullish_bearish_sentiment(
     symbol: str = "AAPL",
-    raw: str = "1",
+    raw: int = 1,
 ) -> str:
     """URL builder for bullish_bearish_sentiment"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/flow"
@@ -23,9 +23,9 @@ def options_flow(
     symbol: str = "AAPL",
     orderBy: str = "premium",
     orderDir: str = "desc",
-    limit: str = "3",
+    limit: int = 3,
     min_trade_size: int = 10,
-    raw: str = "1",
+    raw: int = 1,
 ) -> str:
     """URL builder for options_flow"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/flow"

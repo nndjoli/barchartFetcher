@@ -9,7 +9,7 @@ def options_prices(
     orderBy: str = "strikePrice",
     orderDir: str = "asc",
     optionsOverview: str = "true",
-    raw: str = "1",
+    raw: int = 1,
 ) -> str:
     """URL builder for options_prices"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/get"

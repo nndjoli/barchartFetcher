@@ -8,9 +8,9 @@ def long_collar_spread(
     orderDir: str = "asc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for long_collar_spread"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/options/long-collar-spread"
@@ -18,8 +18,6 @@ def long_collar_spread(
         "baseSymbol": baseSymbol,
         "orderBy": orderBy,
         "orderDir": orderDir,
-        "expirationDate": expirationDate,
-        "expirationType": expirationType,
         "page": page,
         "limit": limit,
         "raw": raw,
@@ -40,9 +38,9 @@ def married_puts(
     orderDir: str = "asc",
     expirationDate=None,
     expirationType=None,
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for married_puts"""
     base_url = (
@@ -52,8 +50,6 @@ def married_puts(
         "baseSymbol": baseSymbol,
         "orderBy": orderBy,
         "orderDir": orderDir,
-        "expirationDate": expirationDate,
-        "expirationType": expirationType,
         "page": page,
         "limit": limit,
         "raw": raw,

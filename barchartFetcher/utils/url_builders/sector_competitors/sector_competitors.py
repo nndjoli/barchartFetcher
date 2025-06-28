@@ -8,9 +8,9 @@ def sector_competitors(
     orderBy: str = "weightedAlpha",
     orderDir: str = "desc",
     hasOptions: str = "true",
-    page: str = "1",
-    limit: str = "100",
-    raw: str = "1",
+    page: int = 1,
+    limit: int = 100,
+    raw: int = 1,
 ) -> str:
     """URL builder for sector_competitors"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"

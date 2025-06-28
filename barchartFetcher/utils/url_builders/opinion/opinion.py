@@ -2,7 +2,7 @@
 from urllib.parse import urlencode
 
 
-def composite_indicator(symbols: str = "AAPL", raw: str = "1") -> str:
+def composite_indicator(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for composite_indicator"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -15,7 +15,7 @@ def composite_indicator(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def long_term_indicators(symbols: str = "AAPL", raw: str = "1") -> str:
+def long_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for long_term_indicators"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -28,7 +28,7 @@ def long_term_indicators(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def medium_term_indicators(symbols: str = "AAPL", raw: str = "1") -> str:
+def medium_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for medium_term_indicators"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -41,7 +41,7 @@ def medium_term_indicators(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def opinion(symbols: str = "AAPL", raw: str = "1") -> str:
+def opinion(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for opinion"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
@@ -54,7 +54,7 @@ def opinion(symbols: str = "AAPL", raw: str = "1") -> str:
     return base_url + "?" + query
 
 
-def short_term_indicators(symbols: str = "AAPL", raw: str = "1") -> str:
+def short_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
     """URL builder for short_term_indicators"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {

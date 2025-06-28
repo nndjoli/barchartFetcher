@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 
 def gamma_exposure(
     symbols: str = "AAPL",
-    expirations: str = "<expirations>",
+    expirations=None,
     groupBy: str = "strikePrice",
     max_strike_spot_distance: int = 100,
 ) -> str:

@@ -3,7 +3,10 @@ from urllib.parse import urlencode
 
 
 def put_call_ratio(
-    symbol: str = "AAPL", raw: str = "1", page: str = "1", limit: str = "100"
+    symbol: str = "AAPL",
+    raw: int = 1,
+    page: int = 1,
+    limit: int = 100,
 ) -> str:
     """URL builder for put_call_ratio"""
     base_url = (
@@ -23,7 +26,7 @@ def put_call_ratio(
 
 def put_call_ratio_historical(
     symbol: str = "AAPL",
-    limit: str = "200",
+    limit: int = 200,
     orderBy: str = "date",
     orderDir: str = "desc",
 ) -> str:

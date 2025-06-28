@@ -3,7 +3,9 @@ from urllib.parse import urlencode
 
 
 def sec_filings(
-    symbol: str = "AAPL", transactions: str = "1", limit: str = "20"
+    symbol: str = "AAPL",
+    transactions: int | float = 1,
+    limit: int = 20,
 ) -> str:
     """URL builder for sec_filings"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/sec-filings/get"
