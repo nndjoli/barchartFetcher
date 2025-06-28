@@ -49,41 +49,41 @@ class OverviewFields:
             "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": QUOTE_FIELDS,
-            "meta": "fields.shortName,fields.description,fields.type",
+            "meta": "field.shortName,field.description,field.type",
             "raw": 1,
         }
         self.fundamentals_fields = {
             "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": FUNDAMENTALS_FIELDS,
-            "meta": "fields.shortName,fields.description,fields.type",
+            "meta": "field.shortName,field.description,field.type",
             "raw": 1,
         }
         self.options_overview_fields = {
             "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": OPTIONS_OVERVIEW_FIELDS,
-            "meta": "fields.shortName,fields.description,fields.type",
+            "meta": "field.shortName,field.description,field.type",
             "raw": 1,
         }
         self.analyst_rating_fields = {
             "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": ANALYST_RATING_FIELDS,
-            "meta": "fields.shortName,fields.description,fields.type",
+            "meta": "field.shortName,field.description,field.type",
             "raw": 1,
         }
         self.price_performance_fields = {
             "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": PRICE_PERFORMANCE_FIELDS,
-            "meta": "fields.shortName,fields.description,fields.type",
+            "meta": "field.shortName,field.description,field.type",
             "raw": 1,
         }
         self.technical_opinion_fields = {
             "endpoint": "quote",
             "symbol_param": "symbols",
             "fields": TECHNICAL_OPINION_FIELDS,
-            "meta": "fields.shortName,fields.description,fields.type",
+            "meta": "field.shortName,field.description,field.type",
             "raw": 1,
         }
