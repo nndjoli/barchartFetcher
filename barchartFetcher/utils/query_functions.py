@@ -3,6 +3,7 @@ import nest_asyncio
 nest_asyncio.apply()
 import asyncio
 from typing import Any, Dict, Optional, Union
+
 import httpx
 
 
@@ -43,8 +44,10 @@ def sync_query(
 
     try:
         with httpx.Client(
-            headers=headers, cookies=cookies, timeout=10
+            headers=headers, cookies=cookies, timeout=30.0
         ) as client:
+            client = httpx.Client()
+
             if method.upper() == "POST":
                 response = client.post(url, headers=headers, cookies=cookies)
             else:
@@ -102,7 +105,10 @@ async def async_query(
 
     try:
         response = await async_client.get(
-            url, headers=headers, cookies=cookies, timeout=10
+            url,
+            headers=headers,
+            cookies=cookies,
+            timeout=30.0,
         )
     except httpx.HTTPError as exc:
         return {"Error": f"Network error while requesting {url}: {exc}"}
