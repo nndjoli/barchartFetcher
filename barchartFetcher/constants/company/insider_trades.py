@@ -10,8 +10,9 @@ class InsiderTradesFields:
     def __init__(self):
         self.insider_trades_fields = {
             "endpoint": "insider_trades",
-            "symbol_param": "eq(symbol|<symbol>)",
-            "eq(symbol|<symbol>)": "",
+            "symbol_param": "eq(symbol,<symbol>)",
+            "fields": INSIDER_TRADES_FIELDS,
+            "eq(symbol,<symbol>)": "",
             "orderBy": "transactionDate",
             "orderDir": "desc",
             "meta": "field.shortName,field.type,field.description",
