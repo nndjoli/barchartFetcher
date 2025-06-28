@@ -5,15 +5,14 @@ import nest_asyncio
 from barchartFetcher.utils.query_auth_class import QueryAuthClass
 from barchartFetcher.utils.query_functions import (
     async_queries as _async_queries,
-    sync_query as _sync_query,
 )
+from barchartFetcher.utils.query_functions import sync_query as _sync_query
 
 nest_asyncio.apply()
 import asyncio
 
 
 class QueryManager:
-
     def __init__(self) -> None:
         """Cache headers and cookies from QueryAuthClass."""
         self._auth = QueryAuthClass()
