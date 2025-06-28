@@ -12,7 +12,7 @@ class MaxPainVolSkewFields:
             "symbol_param": "symbols",
             "raw": 1,
             "fields": MAX_PAIN_VOL_SKEW_FIELDS,
-            "expirations": "Example: 2025-06-27,2025-07-03,2025-07-11",
+            "expirations": "<expirations>",
             "groupBy": "expirationDate",
             "le(nearestToLast,40)": "",
         }
