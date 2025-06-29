@@ -4,6 +4,7 @@ from .utils.sync_query_classes import (
     Financials,
     Options,
     OptionsStrategies,
+    Quotes,
     Technicals,
 )
 
@@ -12,6 +13,7 @@ all = [
     "Company",
     "Financials",
     "Options",
+    "Quotes",
     "OptionsStrategies",
     "Technicals",
 ]
