@@ -16,7 +16,7 @@ def sector_competitors(
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {
         "symbol": symbol,
-        "lists": f"stocks.inSector.all({sector_symbol}>)",
+        "lists": f"stocks.inSector.all({sector_symbol})",
         "orderBy": orderBy,
         "orderDir": orderDir,
         "hasOptions": hasOptions,
@@ -26,5 +26,6 @@ def sector_competitors(
         "fields": "symbol,weightedAlpha,lastPrice,priceChange,percentChange,highPrice1y,lowPrice1y,percentChange1y,tradeTime,symbolCode,symbolType,hasOptions",
         "meta": "field.shortName,field.type,field.description,lists.lastUpdate",
     }
+
     query = urlencode(params)
     return base_url + "?" + query
