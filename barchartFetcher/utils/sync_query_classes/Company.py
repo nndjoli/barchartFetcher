@@ -16,7 +16,27 @@ class Company:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for sector_competitors using QueryManager"""
+        """List competitors within ``sector_symbol`` for ``symbol``.
+
+        Parameters
+        ----------
+        symbol : str, default "AAPL"
+            Base ticker symbol.
+        sector_symbol : str, default "-COMC"
+            Identifier for the sector in Barchart's API.
+        orderBy : str, default "weightedAlpha"
+            Field used for sorting results.
+        orderDir : str, default "desc"
+            Sorting direction, ``"asc"`` or ``"desc"``.
+        hasOptions : str, default "true"
+            Filter companies that have listed options.
+        page : int, default 1
+            Page number for paginated results.
+        limit : int, default 100
+            Maximum number of rows to return.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.company.sector_competitors(
             self.__query_manager__,
             symbol,
@@ -30,31 +50,71 @@ class Company:
         )
 
     def company_informations(self, symbols: str = "AAPL", raw: int = 1):
-        """Query function for company_informations using QueryManager"""
+        """Return company statistics for ``symbols`` from barchart.com.
+
+        Parameters
+        ----------
+        symbols : str, default "AAPL"
+            Comma separated ticker symbols.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.company.company_informations(
             self.__query_manager__, symbols, raw
         )
 
     def growth(self, symbols: str = "AAPL", raw: int = 1):
-        """Query function for growth using QueryManager"""
+        """Retrieve growth metrics for ``symbols`` from barchart.com.
+
+        Parameters
+        ----------
+        symbols : str, default "AAPL"
+            Comma separated ticker symbols.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.company.growth(
             self.__query_manager__, symbols, raw
         )
 
     def quote_overview(self, symbols: str = "AAPL", raw: int = 1):
-        """Query function for overview using QueryManager"""
+        """Get an overview quote for ``symbols`` from barchart.com.
+
+        Parameters
+        ----------
+        symbols : str, default "AAPL"
+            Comma separated ticker symbols.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.company.overview(
             self.__query_manager__, symbols, raw
         )
 
     def per_share_information(self, symbols: str = "AAPL", raw: int = 1):
-        """Query function for per_share_information using QueryManager"""
+        """Return per share data for ``symbols`` from barchart.com.
+
+        Parameters
+        ----------
+        symbols : str, default "AAPL"
+            Comma separated ticker symbols.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.company.per_share_information(
             self.__query_manager__, symbols, raw
         )
 
     def ratios(self, symbols: str = "AAPL", raw: int = 1):
-        """Query function for ratios using QueryManager"""
+        """Fetch financial ratios for ``symbols`` from barchart.com.
+
+        Parameters
+        ----------
+        symbols : str, default "AAPL"
+            Comma separated ticker symbols.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.company.ratios(
             self.__query_manager__, symbols, raw
         )
@@ -65,7 +125,17 @@ class Company:
         transactions: int | float = 1,
         limit: int = 20,
     ):
-        """Query function for sec_filings using QueryManager"""
+        """Retrieve SEC filings for ``symbol`` from barchart.com.
+
+        Parameters
+        ----------
+        symbol : str, default "AAPL"
+            Ticker symbol.
+        transactions : int or float, default 1
+            Number of transactions to request.
+        limit : int, default 20
+            Maximum number of rows to return.
+        """
         return SyncQueryFunctions.company.sec_filings(
             self.__query_manager__, symbol, transactions, limit
         )

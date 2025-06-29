@@ -16,7 +16,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_call_butterfly using QueryManager"""
+        """Search for long call butterfly setups on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "breakEvenProbability"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_call_butterfly(
             self.__query_manager__,
             baseSymbol,
@@ -40,7 +60,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_iron_butterfly using QueryManager"""
+        """Search for long iron butterfly strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "breakEvenProbability"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_iron_butterfly(
             self.__query_manager__,
             baseSymbol,
@@ -64,7 +104,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_put_butterfly using QueryManager"""
+        """Search for long put butterfly strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "breakEvenProbability"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_put_butterfly(
             self.__query_manager__,
             baseSymbol,
@@ -88,7 +148,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_call_butterfly using QueryManager"""
+        """Search for short call butterfly strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "lossProbability"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_call_butterfly(
             self.__query_manager__,
             baseSymbol,
@@ -112,7 +192,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_iron_butterfly using QueryManager"""
+        """Search for short iron butterfly strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "lossProbability"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_iron_butterfly(
             self.__query_manager__,
             baseSymbol,
@@ -136,7 +236,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_put_butterfly using QueryManager"""
+        """Search for short put butterfly strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "lossProbability"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_put_butterfly(
             self.__query_manager__,
             baseSymbol,
@@ -160,7 +280,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_call_condor using QueryManager"""
+        """Search for long call condor strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "breakEvenProbability"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_call_condor(
             self.__query_manager__,
             baseSymbol,
@@ -184,7 +324,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_iron_condor using QueryManager"""
+        """Search for long iron condor strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "breakEvenProbability"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_iron_condor(
             self.__query_manager__,
             baseSymbol,
@@ -208,7 +368,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_put_condor using QueryManager"""
+        """Search for long put condor strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "breakEvenProbability"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_put_condor(
             self.__query_manager__,
             baseSymbol,
@@ -232,7 +412,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_call_condor using QueryManager"""
+        """Search for short call condor strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "lossProbability"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_call_condor(
             self.__query_manager__,
             baseSymbol,
@@ -256,7 +456,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_iron_condor using QueryManager"""
+        """Search for short iron condor strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "lossProbability"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_iron_condor(
             self.__query_manager__,
             baseSymbol,
@@ -280,7 +500,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_put_condor using QueryManager"""
+        """Search for short put condor strategies on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "lossProbability"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type such as ``monthly``.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_put_condor(
             self.__query_manager__,
             baseSymbol,
@@ -305,7 +545,29 @@ class OptionsStrategies:
         page: int = 1,
         raw: int = 1,
     ):
-        """Query function for covered_calls using QueryManager"""
+        """Screen for covered call candidates on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        delta_low : float, default 0.1
+            Minimum option delta.
+        delta_high : float, default 0.6
+            Maximum option delta.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        orderBy : str, default "strike"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        page : int, default 1
+            Page number to return.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.covered_calls(
             self.__query_manager__,
             baseSymbol,
@@ -330,7 +592,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_call_calendar using QueryManager"""
+        """Search for long call calendar spreads on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "ivSkew"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_call_calendar(
             self.__query_manager__,
             baseSymbol,
@@ -354,7 +636,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_call_diagonal using QueryManager"""
+        """Search for long call diagonal spreads on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "ivSkewInverse"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_call_diagonal(
             self.__query_manager__,
             baseSymbol,
@@ -378,7 +680,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_put_calendar using QueryManager"""
+        """Search for long put calendar spreads on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "ivSkew"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_put_calendar(
             self.__query_manager__,
             baseSymbol,
@@ -402,7 +724,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_put_diagonal using QueryManager"""
+        """Search for long put diagonal spreads on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "ivSkew"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_put_diagonal(
             self.__query_manager__,
             baseSymbol,
@@ -426,7 +768,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_call_diagonal using QueryManager"""
+        """Search for short call diagonal spreads on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "ivSkew"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_call_diagonal(
             self.__query_manager__,
             baseSymbol,
@@ -450,7 +812,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_put_diagonal using QueryManager"""
+        """Search for short put diagonal spreads on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "ivSkewInverse"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_put_diagonal(
             self.__query_manager__,
             baseSymbol,
@@ -476,7 +858,31 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_call using QueryManager"""
+        """Look for long call opportunities on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        delta_low : float, default 0.2
+            Minimum option delta.
+        delta_high : float, default 0.9
+            Maximum option delta.
+        orderBy : str, default "strikePrice"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_call(
             self.__query_manager__,
             baseSymbol,
@@ -504,7 +910,31 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_put using QueryManager"""
+        """Look for long put opportunities on barchart.com.
+
+        Parameters
+        ----------
+        delta_low : str, default "-0.9"
+            Minimum option delta.
+        delta_high : str, default "-0.2"
+            Maximum option delta.
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikePrice"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_put(
             self.__query_manager__,
             delta_low,
@@ -531,7 +961,29 @@ class OptionsStrategies:
         page: int = 1,
         raw: int = 1,
     ):
-        """Query function for naked_puts using QueryManager"""
+        """Return naked put ideas from barchart.com.
+
+        Parameters
+        ----------
+        delta_low : str, default "-0.6"
+            Minimum option delta.
+        delta_high : str, default "-0.1"
+            Maximum option delta.
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strike"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.naked_puts(
             self.__query_manager__,
             delta_low,
@@ -556,7 +1008,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_collar_spread using QueryManager"""
+        """Search for long collar spreads on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_collar_spread(
             self.__query_manager__,
             baseSymbol,
@@ -580,7 +1052,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for married_puts using QueryManager"""
+        """Return married put strategies from barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikePrice"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.married_puts(
             self.__query_manager__,
             baseSymbol,
@@ -604,7 +1096,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_straddle using QueryManager"""
+        """Search for long straddle setups on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_straddle(
             self.__query_manager__,
             baseSymbol,
@@ -628,7 +1140,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for long_strangle using QueryManager"""
+        """Search for long strangle setups on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.long_strangle(
             self.__query_manager__,
             baseSymbol,
@@ -652,7 +1184,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_straddle using QueryManager"""
+        """Search for short straddle setups on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_straddle(
             self.__query_manager__,
             baseSymbol,
@@ -676,7 +1228,27 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Query function for short_strangle using QueryManager"""
+        """Search for short strangle setups on barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        page : int, default 1
+            Page number to return.
+        limit : int, default 100
+            Maximum number of strategies.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.short_strangle(
             self.__query_manager__,
             baseSymbol,
@@ -704,7 +1276,35 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Query function for bear_call_spreads using QueryManager"""
+        """Bear call spread ideas sourced from barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        abs_deltaLeg1_low : float, default 0
+            Minimum absolute delta for the first leg.
+        abs_deltaLeg1_high : float, default 0.6
+            Maximum absolute delta for the first leg.
+        abs_deltaLeg2_low : str, default ""
+            Minimum absolute delta for the second leg.
+        abs_deltaLeg2_high : float, default 0.3
+            Maximum absolute delta for the second leg.
+        riskRewardRatio_low : float, default 2
+            Minimum risk/reward ratio.
+        riskRewardRatio_high : float, default 5
+            Maximum risk/reward ratio.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.bear_call_spreads(
             self.__query_manager__,
             baseSymbol,
@@ -732,7 +1332,27 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Query function for bear_put_spreads using QueryManager"""
+        """Bear put spread opportunities from barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        riskRewardRatio_low : float, default 0.33
+            Minimum risk/reward ratio.
+        riskRewardRatio_high : float, default 1.5
+            Maximum risk/reward ratio.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "desc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.bear_put_spreads(
             self.__query_manager__,
             baseSymbol,
@@ -756,7 +1376,27 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Query function for bull_call_spreads using QueryManager"""
+        """Bull call spread ideas sourced from barchart.com.
+
+        Parameters
+        ----------
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        riskRewardRatio_low : float, default 0.33
+            Minimum risk/reward ratio.
+        riskRewardRatio_high : float, default 1.5
+            Maximum risk/reward ratio.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.bull_call_spreads(
             self.__query_manager__,
             baseSymbol,
@@ -784,7 +1424,35 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Query function for bull_put_spreads using QueryManager"""
+        """Bull put spread opportunities from barchart.com.
+
+        Parameters
+        ----------
+        abs_deltaLeg1_low : str, default ""
+            Minimum absolute delta for the first leg.
+        abs_deltaLeg1_high : float, default 0.6
+            Maximum absolute delta for the first leg.
+        abs_deltaLeg2_low : float, default 0
+            Minimum absolute delta for the second leg.
+        abs_deltaLeg2_high : float, default 0.3
+            Maximum absolute delta for the second leg.
+        riskRewardRatio_low : float, default 2
+            Minimum risk/reward ratio.
+        riskRewardRatio_high : float, default 5
+            Maximum risk/reward ratio.
+        baseSymbol : str, default "AAPL"
+            Underlying ticker symbol.
+        orderBy : str, default "strikeLeg1"
+            Field used to sort results.
+        orderDir : str, default "asc"
+            Sorting direction.
+        expirationDate : str or None
+            Optional expiration date filter.
+        expirationType : str or None
+            Expiration type filter.
+        raw : int, default 1
+            ``1`` to request raw values from the API.
+        """
         return SyncQueryFunctions.options_strategies.bull_put_spreads(
             self.__query_manager__,
             abs_deltaLeg1_low,
