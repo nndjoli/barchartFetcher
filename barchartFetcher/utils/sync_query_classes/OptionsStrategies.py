@@ -29,13 +29,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_call_butterfly(
             self.__query_manager__,
@@ -73,13 +73,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_iron_butterfly(
             self.__query_manager__,
@@ -117,13 +117,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_put_butterfly(
             self.__query_manager__,
@@ -161,13 +161,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_call_butterfly(
             self.__query_manager__,
@@ -205,13 +205,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_iron_butterfly(
             self.__query_manager__,
@@ -249,13 +249,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_put_butterfly(
             self.__query_manager__,
@@ -293,13 +293,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_call_condor(
             self.__query_manager__,
@@ -337,13 +337,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_iron_condor(
             self.__query_manager__,
@@ -381,13 +381,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_put_condor(
             self.__query_manager__,
@@ -425,13 +425,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_call_condor(
             self.__query_manager__,
@@ -469,13 +469,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_iron_condor(
             self.__query_manager__,
@@ -513,13 +513,13 @@ class OptionsStrategies:
         expirationDate : str or None
             Optional expiration date filter.
         expirationType : str or None
-            Expiration type such as ``monthly``.
+            Expiration type such as `monthly`.
         page : int, default 1
             Page number to return.
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_put_condor(
             self.__query_manager__,
@@ -566,7 +566,7 @@ class OptionsStrategies:
         page : int, default 1
             Page number to return.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.covered_calls(
             self.__query_manager__,
@@ -611,7 +611,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_call_calendar(
             self.__query_manager__,
@@ -655,7 +655,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_call_diagonal(
             self.__query_manager__,
@@ -699,7 +699,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_put_calendar(
             self.__query_manager__,
@@ -743,7 +743,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_put_diagonal(
             self.__query_manager__,
@@ -787,7 +787,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_call_diagonal(
             self.__query_manager__,
@@ -831,7 +831,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_put_diagonal(
             self.__query_manager__,
@@ -881,7 +881,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_call(
             self.__query_manager__,
@@ -933,7 +933,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_put(
             self.__query_manager__,
@@ -961,7 +961,7 @@ class OptionsStrategies:
         page: int = 1,
         raw: int = 1,
     ):
-        """Return naked put ideas from barchart.com.
+        """Return naked put ideas from Barchart.
 
         Parameters
         ----------
@@ -982,7 +982,7 @@ class OptionsStrategies:
         page : int, default 1
             Page number to return.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.naked_puts(
             self.__query_manager__,
@@ -1027,7 +1027,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_collar_spread(
             self.__query_manager__,
@@ -1052,7 +1052,7 @@ class OptionsStrategies:
         limit: int = 100,
         raw: int = 1,
     ):
-        """Return married put strategies from barchart.com.
+        """Return married put strategies from Barchart.
 
         Parameters
         ----------
@@ -1071,7 +1071,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.married_puts(
             self.__query_manager__,
@@ -1115,7 +1115,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_straddle(
             self.__query_manager__,
@@ -1159,7 +1159,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.long_strangle(
             self.__query_manager__,
@@ -1203,7 +1203,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_straddle(
             self.__query_manager__,
@@ -1247,7 +1247,7 @@ class OptionsStrategies:
         limit : int, default 100
             Maximum number of strategies.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.short_strangle(
             self.__query_manager__,
@@ -1276,7 +1276,7 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Bear call spread ideas sourced from barchart.com.
+        """Bear call spread ideas sourced from Barchart.
 
         Parameters
         ----------
@@ -1303,7 +1303,7 @@ class OptionsStrategies:
         expirationType : str or None
             Expiration type filter.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.bear_call_spreads(
             self.__query_manager__,
@@ -1332,7 +1332,7 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Bear put spread opportunities from barchart.com.
+        """Bear put spread opportunities from Barchart.
 
         Parameters
         ----------
@@ -1351,7 +1351,7 @@ class OptionsStrategies:
         expirationType : str or None
             Expiration type filter.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.bear_put_spreads(
             self.__query_manager__,
@@ -1376,7 +1376,7 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Bull call spread ideas sourced from barchart.com.
+        """Bull call spread ideas sourced from Barchart.
 
         Parameters
         ----------
@@ -1395,7 +1395,7 @@ class OptionsStrategies:
         expirationType : str or None
             Expiration type filter.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.bull_call_spreads(
             self.__query_manager__,
@@ -1424,7 +1424,7 @@ class OptionsStrategies:
         expirationType=None,
         raw: int = 1,
     ):
-        """Bull put spread opportunities from barchart.com.
+        """Bull put spread opportunities from Barchart.
 
         Parameters
         ----------
@@ -1451,7 +1451,7 @@ class OptionsStrategies:
         expirationType : str or None
             Expiration type filter.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options_strategies.bull_put_spreads(
             self.__query_manager__,
