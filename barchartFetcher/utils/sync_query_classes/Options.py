@@ -11,7 +11,7 @@ class Options:
         type: str = "events",
         events: str = "earnings",
     ):
-        """Historical earnings or events information from barchart.com.
+        """Historical earnings or events information from Barchart.
 
         Parameters
         ----------
@@ -35,7 +35,7 @@ class Options:
         page: int = 1,
         limit: int = 100,
     ):
-        """Expected move and volatility data from barchart.com.
+        """Expected move and volatility data from Barchart.
 
         Parameters
         ----------
@@ -46,7 +46,7 @@ class Options:
         orderDir : str, default "asc"
             Sorting direction.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         page : int, default 1
             Page number of results.
         limit : int, default 100
@@ -64,21 +64,21 @@ class Options:
         symbols : str, default "AAPL"
             Comma separated ticker symbols.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options.options_expirations(
             self.__query_manager__, symbols, raw
         )
 
     def bullish_bearish_sentiment(self, symbol: str = "AAPL", raw: int = 1):
-        """Retrieve bullish/bearish sentiment for ``symbol``.
+        """Retrieve bullish/bearish sentiment for `symbol`.
 
         Parameters
         ----------
         symbol : str, default "AAPL"
             Ticker symbol.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options.bullish_bearish_sentiment(
             self.__query_manager__, symbol, raw
@@ -93,7 +93,7 @@ class Options:
         min_trade_size: int = 10,
         raw: int = 1,
     ):
-        """Fetch notable options flow for ``symbol``.
+        """Fetch notable options flow for `symbol`.
 
         Parameters
         ----------
@@ -108,7 +108,7 @@ class Options:
         min_trade_size : int, default 10
             Minimum trade size filter.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options.options_flow(
             self.__query_manager__,
@@ -127,7 +127,7 @@ class Options:
         groupBy: str = "strikePrice",
         max_strike_spot_distance: int = 100,
     ):
-        """Calculate gamma exposure for ``symbols`` from barchart.com.
+        """Calculate gamma exposure for `symbols` from Barchart.
 
         Parameters
         ----------
@@ -156,14 +156,14 @@ class Options:
         groupBy: str = "expirationDate",
         max_strike_spot_distance: int = 40,
     ):
-        """Return max pain and volatility skew metrics from barchart.com.
+        """Return max pain and volatility skew metrics from Barchart.
 
         Parameters
         ----------
         symbols : str, default "AAPL"
             Comma separated ticker symbols.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         expirations : list[str] or None
             Optional expiration dates filter.
         groupBy : str, default "expirationDate"
@@ -190,7 +190,7 @@ class Options:
         optionsOverview: str = "true",
         raw: int = 1,
     ):
-        """Retrieve option prices for ``baseSymbol`` from barchart.com.
+        """Retrieve option prices for `baseSymbol` from Barchart.
 
         Parameters
         ----------
@@ -207,7 +207,7 @@ class Options:
         optionsOverview : str, default "true"
             Include option overview information.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options.options_prices(
             self.__query_manager__,
@@ -227,14 +227,14 @@ class Options:
         page: int = 1,
         limit: int = 100,
     ):
-        """Current put/call ratio for ``symbol`` from barchart.com.
+        """Current put/call ratio for `symbol` from Barchart.
 
         Parameters
         ----------
         symbol : str, default "AAPL"
             Ticker symbol.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         page : int, default 1
             Page number for paginated results.
         limit : int, default 100
@@ -251,7 +251,7 @@ class Options:
         orderBy: str = "date",
         orderDir: str = "desc",
     ):
-        """Historical put/call ratios for ``symbol`` from barchart.com.
+        """Historical put/call ratios for `symbol` from Barchart.
 
         Parameters
         ----------
@@ -276,7 +276,7 @@ class Options:
         orderDir: str = "desc",
         groupBy: str = "date",
     ):
-        """Implied volatility by days to expiration from barchart.com.
+        """Implied volatility by days to expiration from Barchart.
 
         Parameters
         ----------
@@ -298,7 +298,7 @@ class Options:
     def historical_iv_by_exp_dates(
         self, symbol: str = "AAPL", expirations=None, groupBy: str = "date"
     ):
-        """Implied volatility by expiration dates from barchart.com.
+        """Implied volatility by expiration dates from Barchart.
 
         Parameters
         ----------
@@ -322,7 +322,7 @@ class Options:
         orderDir: str = "desc",
         raw: int = 1,
     ):
-        """Historical volatility for ``symbols`` from barchart.com.
+        """Historical volatility for `symbols` from Barchart.
 
         Parameters
         ----------
@@ -337,7 +337,7 @@ class Options:
         orderDir : str, default "desc"
             Sorting direction.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options.historical_volatility(
             self.__query_manager__,
@@ -357,7 +357,7 @@ class Options:
         orderDir: str = "desc",
         raw: int = 1,
     ):
-        """Implied volatility rank percentile for ``symbol``.
+        """Implied volatility rank percentile for `symbol`.
 
         Parameters
         ----------
@@ -370,7 +370,7 @@ class Options:
         orderDir : str, default "desc"
             Sorting direction.
         raw : int, default 1
-            ``1`` to request raw values from the API.
+            `1` to request raw values from the API.
         """
         return SyncQueryFunctions.options.iv_rank_percentile(
             self.__query_manager__, symbol, limit, orderBy, orderDir, raw
