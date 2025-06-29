@@ -1,4 +1,4 @@
-def analyst_ratings(query_manager, symbol: str = "AAPL", raw: str = "1"):
+def analyst_ratings(query_manager, symbol: str = "AAPL", raw: int = 1):
     """Query function for analyst_ratings using QueryManager"""
     from barchartFetcher.utils.url_builders.analyst_ratings import (
         analyst_ratings,

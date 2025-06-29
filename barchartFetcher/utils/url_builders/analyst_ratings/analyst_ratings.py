@@ -2,7 +2,7 @@
 from urllib.parse import urlencode
 
 
-def analyst_ratings(symbol: str = "AAPL", raw: str = "1") -> str:
+def analyst_ratings(symbol: str = "AAPL", raw: int = 1) -> str:
     """URL builder for analyst_ratings"""
     base_url = "https://www.barchart.com/proxies/core-api/v1/quotes/get"
     params = {

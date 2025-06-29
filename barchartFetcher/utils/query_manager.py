@@ -77,7 +77,7 @@ class QueryManager:
         -------
         dict[str, Any | str | dict[str, str]]
             Results keyed by *tasks_dict* keys. Failures are surfaced as
-            ``{"Error": <message>}``.
+            `{"Error": <message>}`.
 
         Examples
         --------
