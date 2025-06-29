@@ -8,7 +8,7 @@ def company_informations(symbols: str = "AAPL", raw: int = 1) -> str:
     params = {
         "symbols": symbols,
         "raw": raw,
-        "fields": "symbolShortName,address,country,website,numberOfEmployees,phoneNumber,symbolDescription,exchange,industryGroup,industry,sicSymbol,sicDescription,sectors,tradeTime,hasOptions,hasWeeklyOptions,openPrice,highPrice,lowPrice,lastPrice,priceChange,percentChange",
+        "fields": "symbol,symbolShortName,address,country,website,numberOfEmployees,phoneNumber,symbolDescription,exchange,industryGroup,industry,sicSymbol,sicDescription,sectors,tradeTime,hasOptions,hasWeeklyOptions,openPrice,highPrice,lowPrice,lastPrice,priceChange,percentChange",
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
@@ -21,7 +21,7 @@ def growth(symbols: str = "AAPL", raw: int = 1) -> str:
     params = {
         "symbols": symbols,
         "raw": raw,
-        "fields": "percentChange1y, percentChange3y, percentChange5y,revenueGrowth5y,earningsGrowth5y,dividendGrowth5y",
+        "fields": "symbol,percentChange1y, percentChange3y, percentChange5y,revenueGrowth5y,earningsGrowth5y,dividendGrowth5y",
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
@@ -34,7 +34,7 @@ def overview(symbols: str = "AAPL", raw: int = 1) -> str:
     params = {
         "symbols": symbols,
         "raw": raw,
-        "fields": "marketCap,enterpriseValue,sharesOutstanding,annualSales,annualNetIncome,lastQuarterSales,lastQuarterIncome,ebit,ebitda,beta,percentInsider,percentInstitutional,float,floatPercentage,shortVolumeRatio",
+        "fields": "symbol,marketCap,enterpriseValue,sharesOutstanding,annualSales,annualNetIncome,lastQuarterSales,lastQuarterIncome,ebit,ebitda,beta,percentInsider,percentInstitutional,float,floatPercentage,shortVolumeRatio",
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
@@ -47,7 +47,7 @@ def per_share_information(symbols: str = "AAPL", raw: int = 1) -> str:
     params = {
         "symbols": symbols,
         "raw": raw,
-        "fields": "earnings,epsDate,nextEarningsDate,epsAnnual,epsGrowthQuarter,epsGrowthYear,dividendRate,dividendYield,dividend,dividendDate,dividendExDate,paymentDate,dividendPayout,split,splitDate",
+        "fields": "symbol,earnings,epsDate,nextEarningsDate,epsAnnual,epsGrowthQuarter,epsGrowthYear,dividendRate,dividendYield,dividend,dividendDate,dividendExDate,paymentDate,dividendPayout,split,splitDate",
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
@@ -60,7 +60,7 @@ def ratios(symbols: str = "AAPL", raw: int = 1) -> str:
     params = {
         "symbols": symbols,
         "raw": raw,
-        "fields": "peRatioTrailing,peRatioForward,pegRatio,returnOnEquity,returnOnAssets,profitMargin,debtEquity,priceSales,priceCashFlow,priceBook,bookValue,interestCoverage",
+        "fields": "symbol,peRatioTrailing,peRatioForward,pegRatio,returnOnEquity,returnOnAssets,profitMargin,debtEquity,priceSales,priceCashFlow,priceBook,bookValue,interestCoverage",
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)

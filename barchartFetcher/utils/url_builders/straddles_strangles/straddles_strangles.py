@@ -21,7 +21,7 @@ def long_straddle(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:
@@ -51,7 +51,7 @@ def long_strangle(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:
@@ -82,7 +82,7 @@ def short_straddle(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:
@@ -113,7 +113,7 @@ def short_strangle(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,maxProfitProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,maxProfitProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:

@@ -23,7 +23,7 @@ def sector_competitors(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "weightedAlpha,lastPrice,priceChange,percentChange,highPrice1y,lowPrice1y,percentChange1y,tradeTime,symbolCode,symbolType,hasOptions",
+        "fields": "symbol,weightedAlpha,lastPrice,priceChange,percentChange,highPrice1y,lowPrice1y,percentChange1y,tradeTime,symbolCode,symbolType,hasOptions",
         "meta": "field.shortName,field.type,field.description,lists.lastUpdate",
     }
     query = urlencode(params)

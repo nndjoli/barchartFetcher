@@ -17,7 +17,7 @@ def put_call_ratio(
         "raw": raw,
         "page": page,
         "limit": limit,
-        "fields": "expirationDate,expirationType,daysToExpiration,putVolume,callVolume,totalVolume,putCallVolumeRatio,putOpenInterest,callOpenInterest,totalOpenInterest,putCallOpenInterestRatio,averageVolatility,symbolCode,symbolType,lastPrice,dailyLastPrice",
+        "fields": "symbol,expirationDate,expirationType,daysToExpiration,putVolume,callVolume,totalVolume,putCallVolumeRatio,putOpenInterest,callOpenInterest,totalOpenInterest,putCallOpenInterestRatio,averageVolatility,symbolCode,symbolType,lastPrice,dailyLastPrice",
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
@@ -39,7 +39,7 @@ def put_call_ratio_historical(
         "limit": limit,
         "orderBy": orderBy,
         "orderDir": orderDir,
-        "fields": "putCallVolumeRatio,putCallOpenInterestRatio,date",
+        "fields": "symbol,putCallVolumeRatio,putCallOpenInterestRatio,date",
     }
     query = urlencode(params)
     return base_url + "?" + query

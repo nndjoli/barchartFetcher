@@ -21,7 +21,7 @@ def long_call_butterfly(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate is not None:
@@ -52,7 +52,7 @@ def long_iron_butterfly(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,askPriceLeg3,strikeLeg4,bidPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,askPriceLeg3,strikeLeg4,bidPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate is not None:
@@ -82,7 +82,7 @@ def long_put_butterfly(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate is not None:
@@ -113,7 +113,7 @@ def short_call_butterfly(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,bidPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,bidPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate is not None:
@@ -144,7 +144,7 @@ def short_iron_butterfly(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate is not None:
@@ -175,7 +175,7 @@ def short_put_butterfly(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,bidPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,bidPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate is not None:

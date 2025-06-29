@@ -13,7 +13,7 @@ def sec_filings(
         "symbol": symbol,
         "transactions": transactions,
         "limit": limit,
-        "fields": "date,formName,description,htmlUrl,wordUrl,pdfUrl,excelUrl",
+        "fields": "symbol,date,formName,description,htmlUrl,wordUrl,pdfUrl,excelUrl",
     }
     query = urlencode(params)
     return base_url + "?" + query

@@ -26,7 +26,7 @@ def bear_call_spreads(
         "orderBy": orderBy,
         "orderDir": orderDir,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,lossProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,lossProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:
@@ -60,7 +60,7 @@ def bear_put_spreads(
         "between(abs(deltaLeg1),0.3,)": "",
         "between(abs(deltaLeg2),0.1,)": "",
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:
@@ -92,7 +92,7 @@ def bull_call_spreads(
         "between(abs(deltaLeg1),0.3,)": "",
         "between(abs(deltaLeg2),0.1,)": "",
         "raw": raw,
-        "fields": "breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:
@@ -130,7 +130,7 @@ def bull_put_spreads(
         "orderBy": orderBy,
         "orderDir": orderDir,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,lossProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,lossProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:

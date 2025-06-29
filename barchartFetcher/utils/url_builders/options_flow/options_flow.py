@@ -12,7 +12,7 @@ def bullish_bearish_sentiment(
         "symbol": symbol,
         "in(sentiment,(Bearish,Bullish))": "",
         "raw": raw,
-        "fields": "symbolType,sentiment,premium,tradeSize,delta,symbolCode",
+        "fields": "symbol,symbolType,sentiment,premium,tradeSize,delta,symbolCode",
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)

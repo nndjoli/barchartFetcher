@@ -11,7 +11,7 @@ def earnings(
         "symbol": symbol,
         "type": type,
         "events": events,
-        "fields": "tradeTime.format(Y-m-d),value,event",
+        "fields": "symbol,tradeTime.format(Y-m-d),value,event",
     }
     query = urlencode(params)
     return base_url + "?" + query
@@ -36,7 +36,7 @@ def expected_move(
         "raw": raw,
         "page": page,
         "limit": limit,
-        "fields": "expirationDate,expirationType,daysToExpiration,baseLastPrice,impliedMove,impliedMovePercent,baseUpperPrice,baseLowerPrice,averageVolatility,baseNextEarningsDate,baseTimeCode,symbolCode,symbolType",
+        "fields": "symbol,expirationDate,expirationType,daysToExpiration,baseLastPrice,impliedMove,impliedMovePercent,baseUpperPrice,baseLowerPrice,averageVolatility,baseNextEarningsDate,baseTimeCode,symbolCode,symbolType",
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)

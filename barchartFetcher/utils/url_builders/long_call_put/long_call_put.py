@@ -26,7 +26,7 @@ def long_call(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,symbol,baseSymbol,askPrice,timePremiumAskPercent,breakEvenAsk,percentToBreakEvenAsk,netDebit,daysToExpiration,volume,openInterest,impliedVolatilityRank1y,delta,breakEvenProbability,tradeTime,otmProbability,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,symbol,baseSymbol,askPrice,timePremiumAskPercent,breakEvenAsk,percentToBreakEvenAsk,netDebit,daysToExpiration,volume,openInterest,impliedVolatilityRank1y,delta,breakEvenProbability,tradeTime,otmProbability,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:
@@ -62,7 +62,7 @@ def long_put(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,symbol,baseSymbol,askPrice,timePremiumAskPercent,breakEvenAsk,percentToBreakEvenAsk,netDebit,daysToExpiration,volume,openInterest,impliedVolatilityRank1y,delta,breakEvenProbability,tradeTime,otmProbability,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+        "fields": "baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,symbol,baseSymbol,askPrice,timePremiumAskPercent,breakEvenAsk,percentToBreakEvenAsk,netDebit,daysToExpiration,volume,openInterest,impliedVolatilityRank1y,delta,breakEvenProbability,tradeTime,otmProbability,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
         "meta": "expirations,field.shortName,field.type,field.description",
     }
     if expirationDate:

@@ -19,7 +19,7 @@ def insider_trades(
         "page": page,
         "limit": limit,
         "raw": raw,
-        "fields": "fullName,shortJobTitle,transactionType,transactionDate,amount,reportedPrice,usdValue,eodHolding,eodHoldingPercentage,symbolCode,hasOptions,symbolType,lastPrice,dailyLastPrice",
+        "fields": "symbol,fullName,shortJobTitle,transactionType,transactionDate,amount,reportedPrice,usdValue,eodHolding,eodHoldingPercentage,symbolCode,hasOptions,symbolType,lastPrice,dailyLastPrice",
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)

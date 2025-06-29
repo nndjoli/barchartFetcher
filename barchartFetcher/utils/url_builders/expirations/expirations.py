@@ -10,7 +10,7 @@ def expirations(symbols: str = "AAPL", raw: int = 1) -> str:
     params = {
         "symbols": symbols,
         "raw": raw,
-        "fields": "callVolume,putVolume,putCallVolumeRatio,callOpenInterest,putOpenInterest,putCallOpenInterestRatio,expirationDate,expirationType",
+        "fields": "symbol,callVolume,putVolume,putCallVolumeRatio,callOpenInterest,putOpenInterest,putCallOpenInterestRatio,expirationDate,expirationType",
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
