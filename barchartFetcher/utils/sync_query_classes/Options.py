@@ -127,7 +127,7 @@ class Options:
         groupBy: str = "strikePrice",
         max_strike_spot_distance: int = 100,
     ):
-        """Calculate gamma exposure for `symbols` from Barchart.
+        """Returns gamma exposure for `symbols` from Barchart.
 
         Parameters
         ----------
