@@ -1,34 +1,28 @@
-from barchartFetcher.utils.query_manager import (
-    QueryManager,
-)
-from barchartFetcher.utils.query_category_builder import (
-    QueryCategoryBuilder,
-)
-from barchartFetcher.utils.query_strings_manager import (
-    QueryStringsManager,
-)
-from barchartFetcher.constants.data_fields_manager import (
-    DataFieldsManager,
-)
-
 from dataclasses import dataclass
-from typing import Dict, Any
+from typing import Any, Dict
+
 import pandas as pd
+
+from barchartFetcher.utils.data_fields_manager import DataFieldsManager
+from barchartFetcher.utils.query_category_builder import QueryCategoryBuilder
+from barchartFetcher.utils.query_manager import QueryManager
+from barchartFetcher.utils.query_strings_manager import QueryStringsManager
 
 
 class SymbolQueryClient:
-
     def __init__(self, symbols):
-
         self.symbols = symbols
         self.query_manager = QueryManager()
         self.data_fields_manager = DataFieldsManager(self.query_manager)
-        self.query_strings_manager = QueryStringsManager(self.data_fields_manager.complete_dataframe)
-        self.query_category_builder = QueryCategoryBuilder(self.query_manager, self.query_strings_manager.query_strings_dict)
+        self.query_strings_manager = QueryStringsManager(
+            self.data_fields_manager.complete_dataframe
+        )
+        self.query_category_builder = QueryCategoryBuilder(
+            self.query_manager, self.query_strings_manager.query_strings_dict
+        )
 
     @dataclass
     class __informations:
-
         symbolName: Any = None
         symbolShortName: Any = None
         exchange: Any = None
@@ -49,7 +43,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("informations", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "informations", self.symbols
+            )
             tempdf = pd.DataFrame(self.data["informations"]["data"])
             self.symbolName = tempdf["symbolName"].to_list()
             self.symbolShortName = tempdf["symbolShortName"].to_list()
@@ -69,7 +65,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __quotes:
-
         general_symbol_information: Any = None
         current_day_prices: Any = None
         prior_day_prices: Any = None
@@ -89,7 +84,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("quotes", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "quotes", self.symbols
+            )
 
             for key, value in self.data.items():
                 setattr(self, key, value)
@@ -99,7 +96,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __technicals:
-
         gaps_and_range_changes: Any = None
         support_and_resistance: Any = None
         moving_average: Any = None
@@ -124,7 +120,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("technicals", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "technicals", self.symbols
+            )
 
             for key, value in self.data.items():
                 setattr(self, key, value)
@@ -134,7 +132,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __sentiment:
-
         overall_opinion: Any = None
         trend_seeker: Any = None
         short_term_indicators: Any = None
@@ -149,7 +146,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("sentiment", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "sentiment", self.symbols
+            )
 
             for key, value in self.data.items():
                 setattr(self, key, value)
@@ -159,7 +158,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __highs_and_lows:
-
         highs_lows_5d: Any = None
         highs_lows_1mo: Any = None
         highs_lows_3mo: Any = None
@@ -180,7 +178,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("highs_and_lows", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "highs_and_lows", self.symbols
+            )
 
             self.highs_lows_5d = self.data.get("5d_highs_lows", None)
             self.highs_lows_1mo = self.data.get("1mo_highs_lows", None)
@@ -193,14 +193,15 @@ class SymbolQueryClient:
             self.highs_lows_5yr = self.data.get("5yr_highs_lows", None)
             self.highs_lows_10yr = self.data.get("10yr_highs_lows", None)
             self.highs_lows_20yr = self.data.get("20yr_highs_lows", None)
-            self.all_time_highs_lows = self.data.get("all_time_highs_lows", None)
+            self.all_time_highs_lows = self.data.get(
+                "all_time_highs_lows", None
+            )
 
     def HighsAndLows(self):
         return self.__highs_and_lows(self)
 
     @dataclass
     class __fundamentals:
-
         key_statistics: Any = None
         earnings: Any = None
         dividends_and_splits: Any = None
@@ -220,7 +221,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("fundamentals", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "fundamentals", self.symbols
+            )
 
             for key, value in self.data.items():
                 setattr(self, key, value)
@@ -230,7 +233,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __options:
-
         options_overview_implied_volatility: Any = None
         options_overview_iv_rank: Any = None
         options_overview_iv_change: Any = None
@@ -269,7 +271,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("options", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "options", self.symbols
+            )
 
             for key, value in self.data.items():
                 setattr(self, key, value)
@@ -279,7 +283,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __etfs:
-
         etfName: Any = None
         fundFamily: Any = None
         assetClass: Any = None
@@ -313,7 +316,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __futures:
-
         contractName: Any = None
         contractExpirationDate: Any = None
         daysToContractExpiration: Any = None
@@ -330,13 +332,21 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("futures", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "futures", self.symbols
+            )
 
             tempdf = pd.DataFrame(self.data["futures"]["data"])
             self.contractName = tempdf["contractName"].to_list()
-            self.contractExpirationDate = tempdf["contractExpirationDate"].to_list()
-            self.daysToContractExpiration = tempdf["daysToContractExpiration"].to_list()
-            self.contractFirstNoticeDate = tempdf["contractFirstNoticeDate"].to_list()
+            self.contractExpirationDate = tempdf[
+                "contractExpirationDate"
+            ].to_list()
+            self.daysToContractExpiration = tempdf[
+                "daysToContractExpiration"
+            ].to_list()
+            self.contractFirstNoticeDate = tempdf[
+                "contractFirstNoticeDate"
+            ].to_list()
             self.daysToFirstNotice = tempdf["daysToFirstNotice"].to_list()
             self.pointValue = tempdf["pointValue"].to_list()
             self.margin = tempdf["margin"].to_list()
@@ -347,7 +357,6 @@ class SymbolQueryClient:
 
     @dataclass
     class __portfolio:
-
         quantity: Any = None
         action: Any = None
         entry_date: Any = None
@@ -368,7 +377,9 @@ class SymbolQueryClient:
         def __init__(self, parent):
             self._parent = parent
             self.symbols = parent.symbols
-            self.data = parent.query_category_builder.get("portfolio", self.symbols)
+            self.data = parent.query_category_builder.get(
+                "portfolio", self.symbols
+            )
 
             tempdf = pd.DataFrame(self.data["portfolio"]["data"])
             self.quantity = tempdf["quantity"].to_list()
