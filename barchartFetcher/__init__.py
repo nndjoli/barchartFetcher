@@ -9,7 +9,7 @@ from .utils.sync_query_classes import (
     Technicals,
 )
 
-all = [
+__all__ = [
     "Symbol",
     "Analysts",
     "Company",
