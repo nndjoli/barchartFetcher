@@ -1,2 +1,3 @@
+from .query_async_dicts import make_async_dicts
 from .query_endpoints import QueryEndpoints
 from .query_fields_classes import fields_classes_mapping
