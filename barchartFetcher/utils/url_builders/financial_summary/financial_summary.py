@@ -12,7 +12,8 @@ def financial_summary_q(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def financial_summary_y(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -25,4 +26,5 @@ def financial_summary_y(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

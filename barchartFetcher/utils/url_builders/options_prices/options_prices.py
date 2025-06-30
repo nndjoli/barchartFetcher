@@ -27,4 +27,5 @@ def options_prices(
         params["expirationDate"] = expirationDate
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

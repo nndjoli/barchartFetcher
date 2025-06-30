@@ -12,7 +12,8 @@ def lows_highs(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def past_5d(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -25,7 +26,8 @@ def past_5d(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def past_5m(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -38,7 +40,8 @@ def past_5m(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def past_5w(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -51,7 +54,8 @@ def past_5w(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def price_perf(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -64,4 +68,5 @@ def price_perf(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

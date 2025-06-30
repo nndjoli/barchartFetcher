@@ -23,4 +23,5 @@ def insider_trades(
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

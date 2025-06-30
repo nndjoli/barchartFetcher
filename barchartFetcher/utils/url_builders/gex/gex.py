@@ -18,4 +18,5 @@ def gamma_exposure(
         "fields": "symbol,strikePrice,optionType,baseDailyLastPrice,baseLastPrice,dailyGamma,gamma,delta,dailyDelta,dailyOpenInterest,openInterest,dailyVolume,volume,daysToExpiration,expirationDate,averageVolatility",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

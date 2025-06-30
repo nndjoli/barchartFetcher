@@ -12,4 +12,5 @@ def analyst_ratings(symbol: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

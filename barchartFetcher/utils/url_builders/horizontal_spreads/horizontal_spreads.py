@@ -30,7 +30,8 @@ def long_call_calendar(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_call_diagonal(
@@ -61,7 +62,8 @@ def long_call_diagonal(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_put_calendar(
@@ -92,7 +94,8 @@ def long_put_calendar(
     if expirationType:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_put_diagonal(
@@ -122,7 +125,8 @@ def long_put_diagonal(
     if expirationType:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_call_diagonal(
@@ -153,7 +157,8 @@ def short_call_diagonal(
         params["expirationType"] = expirationType
     query = urlencode(params)
 
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_put_diagonal(
@@ -184,4 +189,5 @@ def short_put_diagonal(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

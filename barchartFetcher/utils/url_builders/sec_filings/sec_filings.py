@@ -16,4 +16,5 @@ def sec_filings(
         "fields": "symbol,date,formName,description,htmlUrl,wordUrl,pdfUrl,excelUrl",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

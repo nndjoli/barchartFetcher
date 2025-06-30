@@ -12,7 +12,8 @@ def composite_indicator(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,fields.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -25,7 +26,8 @@ def long_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def medium_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -38,7 +40,8 @@ def medium_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def opinion(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -51,7 +54,8 @@ def opinion(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -64,4 +68,5 @@ def short_term_indicators(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

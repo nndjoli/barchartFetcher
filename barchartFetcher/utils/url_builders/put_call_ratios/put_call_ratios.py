@@ -21,7 +21,8 @@ def put_call_ratio(
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def put_call_ratio_historical(
@@ -42,4 +43,5 @@ def put_call_ratio_historical(
         "fields": "symbol,putCallVolumeRatio,putCallOpenInterestRatio,date",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

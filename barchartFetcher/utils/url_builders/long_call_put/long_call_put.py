@@ -35,7 +35,8 @@ def long_call(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_put(
@@ -70,4 +71,5 @@ def long_put(
     if expirationType:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

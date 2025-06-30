@@ -14,7 +14,8 @@ def earnings(
         "fields": "symbol,tradeTime.format(Y-m-d),value,event",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def expected_move(
@@ -40,4 +41,5 @@ def expected_move(
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

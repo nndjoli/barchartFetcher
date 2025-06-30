@@ -21,4 +21,5 @@ def max_pain_vol_skew(
     if expirations:
         params["expirations"] = expirations
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

@@ -28,4 +28,5 @@ def sector_competitors(
     }
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

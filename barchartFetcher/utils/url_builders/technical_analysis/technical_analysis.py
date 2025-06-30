@@ -12,7 +12,8 @@ def moving_averages(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def stochastics(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -25,7 +26,8 @@ def stochastics(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def strength(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -38,4 +40,5 @@ def strength(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

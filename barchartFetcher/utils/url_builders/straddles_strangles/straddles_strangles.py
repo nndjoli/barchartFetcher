@@ -29,7 +29,8 @@ def long_straddle(
     if expirationType:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_strangle(
@@ -60,7 +61,8 @@ def long_strangle(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_straddle(
@@ -91,7 +93,8 @@ def short_straddle(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_strangle(
@@ -122,4 +125,5 @@ def short_strangle(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

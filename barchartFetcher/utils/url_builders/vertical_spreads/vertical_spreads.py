@@ -35,7 +35,8 @@ def bear_call_spreads(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def bear_put_spreads(
@@ -69,7 +70,8 @@ def bear_put_spreads(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def bull_call_spreads(
@@ -101,7 +103,8 @@ def bull_call_spreads(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def bull_put_spreads(
@@ -139,4 +142,5 @@ def bull_put_spreads(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

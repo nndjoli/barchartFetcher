@@ -30,7 +30,8 @@ def long_call_condor(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_iron_condor(
@@ -63,7 +64,8 @@ def long_iron_condor(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_put_condor(
@@ -95,7 +97,8 @@ def long_put_condor(
     if expirationType is not None:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_call_condor(
@@ -126,7 +129,8 @@ def short_call_condor(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_iron_condor(
@@ -159,7 +163,8 @@ def short_iron_condor(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_put_condor(
@@ -189,4 +194,5 @@ def short_put_condor(
     if expirationType is not None:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

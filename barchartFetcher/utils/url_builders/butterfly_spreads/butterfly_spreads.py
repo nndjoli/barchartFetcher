@@ -30,7 +30,8 @@ def long_call_butterfly(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_iron_butterfly(
@@ -60,7 +61,8 @@ def long_iron_butterfly(
     if expirationType is not None:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def long_put_butterfly(
@@ -91,7 +93,8 @@ def long_put_butterfly(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_call_butterfly(
@@ -122,7 +125,8 @@ def short_call_butterfly(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_iron_butterfly(
@@ -153,7 +157,8 @@ def short_iron_butterfly(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def short_put_butterfly(
@@ -184,4 +189,5 @@ def short_put_butterfly(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

@@ -29,7 +29,8 @@ def long_collar_spread(
     if expirationType:
         params["expirationType"] = expirationType
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def married_puts(
@@ -62,4 +63,5 @@ def married_puts(
         params["expirationType"] = expirationType
 
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

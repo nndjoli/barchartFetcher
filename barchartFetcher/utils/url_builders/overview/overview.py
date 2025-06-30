@@ -12,7 +12,8 @@ def analyst_rating(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def fundamentals(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -25,7 +26,8 @@ def fundamentals(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def options_overview(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -38,7 +40,8 @@ def options_overview(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def price_performance(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -51,7 +54,8 @@ def price_performance(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def quote(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -64,7 +68,8 @@ def quote(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def technical_opinion(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -77,4 +82,5 @@ def technical_opinion(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.description,field.type",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url

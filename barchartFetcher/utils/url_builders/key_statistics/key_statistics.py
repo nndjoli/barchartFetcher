@@ -12,7 +12,8 @@ def company_informations(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def growth(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -25,7 +26,8 @@ def growth(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def overview(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -38,7 +40,8 @@ def overview(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def per_share_information(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -51,7 +54,8 @@ def per_share_information(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
 
 
 def ratios(symbols: str = "AAPL", raw: int = 1) -> str:
@@ -64,4 +68,5 @@ def ratios(symbols: str = "AAPL", raw: int = 1) -> str:
         "meta": "field.shortName,field.type,field.description",
     }
     query = urlencode(params)
-    return base_url + "?" + query
+    url = base_url + "?" + query
+    return url
