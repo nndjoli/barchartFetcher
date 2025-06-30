@@ -1,3 +1,4 @@
+from .fetchers import Symbol
 from .utils.sync_query_classes import (
     Analysts,
     Company,
@@ -9,6 +10,7 @@ from .utils.sync_query_classes import (
 )
 
 all = [
+    "Symbol",
     "Analysts",
     "Company",
     "Financials",
