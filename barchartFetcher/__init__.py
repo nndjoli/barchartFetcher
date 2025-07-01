@@ -1,11 +1,11 @@
-from .fetchers import Symbol
-from .utils.sync_query_classes import (
+from .main import (
     Analysts,
     Company,
     Financials,
     Options,
     OptionsStrategies,
     Quotes,
+    Symbol,
     Technicals,
 )
 
