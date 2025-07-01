@@ -1,0 +1,839 @@
+{
+    "analyst_ratings": {
+        "analyst_ratings_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbol",
+            "fields": "exchange,symbolName,previousPrice,previousHighPrice,previousLowPrice,weeklyPreviousPrice,weeklyPreviousHighPrice,weeklyPreviousLowPrice,monthlyPreviousPrice,monthlyPreviousHighPrice,monthlyPreviousLowPrice,lastPrice,percentChange,priceChange,openPrice,lowPrice,highPrice,lowPrice1y,highPrice1y,highPrice1y,lowPrice1y,weightedAlpha,meanTargetEstimate,highTargetEstimate,lowTargetEstimate,averageRecommendation,totalRecommendations",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        }
+    },
+    "butterfly_spreads": {
+        "long_call_butterfly_fields": {
+            "endpoint": "long_call_butterfly",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "short_call_butterfly_fields": {
+            "endpoint": "short_call_butterfly",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,bidPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "long_put_butterfly_fields": {
+            "endpoint": "long_put_butterfly",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,askPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "short_put_butterfly_fields": {
+            "endpoint": "short_put_butterfly",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,bidPriceLeg3,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "long_iron_butterfly_fields": {
+            "endpoint": "long_iron_butterfly",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,askPriceLeg3,strikeLeg4,bidPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "short_iron_butterfly_fields": {
+            "endpoint": "short_iron_butterfly",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,breakEven,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        }
+    },
+    "condor": {
+        "long_call_condor_fields": {
+            "endpoint": "long_call_condor",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "short_call_condor_fields": {
+            "endpoint": "short_call_condor",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,askPriceLeg3,strikeLeg4,bidPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,impliedVolatilityRank1y,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "long_put_condor_fields": {
+            "endpoint": "long_put_condor",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "short_put_condor_fields": {
+            "endpoint": "short_put_condor",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,askPriceLeg3,strikeLeg4,bidPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,impliedVolatilityRank1y,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "long_iron_condor_fields": {
+            "endpoint": "long_iron_condor",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,strikeLeg3,askPriceLeg3,strikeLeg4,bidPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "breakEvenProbability",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "short_iron_condor_fields": {
+            "endpoint": "short_iron_condor",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,strikeLeg3,bidPriceLeg3,strikeLeg4,askPriceLeg4,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,maxProfit,maxLoss,riskRewardRatio,impliedVolatilityRank1y,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,averageVolatility,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "lossProbability",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        }
+    },
+    "covered_calls": {
+        "covered_calls_fields": {
+            "endpoint": "covered_calls",
+            "symbol_param": "baseSymbol",
+            "fields": "symbol,baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,bidPrice,breakEvenBid,percentToBreakEvenBid,volume,openInterest,impliedVolatilityRank1y,delta,flat,flatAnnual,potentialReturn,breakEvenProbability,tradeTime,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "strike",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "ge(tradeTime,previousTradingDay)": "",
+            "between(delta,0.1,0.6)": "",
+            "expirationType": "weekly",
+            "page": 1,
+            "raw": 1
+        }
+    },
+    "earnings_estimates": {
+        "earnings_estimates_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "estimatedEarnings,estimatedEarnings1qAgo,highTargetEstimate,meanTargetEstimate,lowTargetEstimate,estimatedEarnings2qAgo,estimatedEarnings3qAgo,estimatedEarnings4qAgo,reportedEarnings1qAgo,reportedEarnings2qAgo,reportedEarnings3qAgo,reportedEarnings4qAgo,earningsDifference1qAgo,earningsDifference2qAgo,earningsDifference3qAgo,earningsDifference4qAgo,earningsSurprise1qAgo,earningsSurprise2qAgo,earningsSurprise3qAgo,earningsSurprise4qAgo",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        }
+    },
+    "expected_move": {
+        "expected_move_fields": {
+            "endpoint": "options_expirations",
+            "symbol_param": "symbol",
+            "fields": "expirationDate,expirationType,daysToExpiration,baseLastPrice,impliedMove,impliedMovePercent,baseUpperPrice,baseLowerPrice,averageVolatility,baseNextEarningsDate,baseTimeCode,symbolCode,symbolType",
+            "orderBy": "expirationDate",
+            "orderDir": "asc",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1,
+            "page": 1,
+            "limit": 100
+        },
+        "earnings_fields": {
+            "endpoint": "historical",
+            "symbol_param": "symbol",
+            "fields": "tradeTime.format(Y-m-d),value,event",
+            "type": "events",
+            "events": "earnings"
+        }
+    },
+    "expirations": {
+        "expirations_fields": {
+            "endpoint": "options_expirations",
+            "symbol_param": "symbols",
+            "fields": "callVolume,putVolume,putCallVolumeRatio,callOpenInterest,putOpenInterest,putCallOpenInterestRatio,expirationDate,expirationType",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        }
+    },
+    "financial_summary": {
+        "financial_summary_q_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "revenueLastQuarter,revenue1qAgo,revenue2qAgo,revenue3qAgo,revenue4qAgo,revenueGrowthLastQuarter,revenueGrowth1qAgo,revenueGrowth2qAgo,revenueGrowth3qAgo,revenueGrowth4qAgo,netIncomeLastQuarter,netIncome1qAgo,netIncome2qAgo,netIncome3qAgo,netIncome4qAgo,netIncomeGrowthLastQuarter,netIncomeGrowth1qAgo,netIncomeGrowth2qAgo,netIncomeGrowth3qAgo,netIncomeGrowth4qAgo,assetLastQuarter,asset1qAgo,asset2qAgo,asset3qAgo,asset4qAgo,assetGrowthLastQuarter,assetGrowth1qAgo,assetGrowth2qAgo,assetGrowth3qAgo,assetGrowth4qAgo,liabilityLastQuarter,liability1qAgo,liability2qAgo,liability3qAgo,liability4qAgo,liabilityGrowthLastQuarter,liabilityGrowth1qAgo,liabilityGrowth2qAgo,liabilityGrowth3qAgo,liabilityGrowth4qAgo,cashFlowLastQuarter,cashFlow1qAgo,cashFlow2qAgo,cashFlow3qAgo,cashFlow4qAgo,cashFlowGrowthLastQuarter,cashFlowGrowth1qAgo,cashFlowGrowth2qAgo,cashFlowGrowth3qAgo,cashFlowGrowth4qAgo,changeCashLastQuarter,changeCash1qAgo,changeCash2qAgo,changeCash3qAgo,changeCash4qAgo,changeCashGrowthLastQuarter,changeCashGrowth1qAgo,changeCashGrowth2qAgo,changeCashGrowth3qAgo,changeCashGrowth4qAgo",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "financial_summary_y_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "revenueLastYear,revenue1yAgo,revenue2yAgo,revenue3yAgo,revenue4yAgo,revenueGrowthLastYearrevenueGrowth1yAgo,revenueGrowth2yAgo,revenueGrowth3yAgo,revenueGrowth4yAgo,netIncomeLastYear,netIncome1yAgo,netIncome2yAgo,netIncome3yAgo,netIncome4yAgo,netIncomeGrowthLastYear,netIncomeGrowth1yAgo,netIncomeGrowth2yAgo,netIncomeGrowth3yAgo,netIncomeGrowth4yAgo,assetLastYear,asset1yAgo,asset2yAgo,asset3yAgo,asset4yAgo,assetGrowthLastYear,assetGrowth1yAgo,assetGrowth2yAgo,assetGrowth3yAgo,assetGrowth4yAgo,liabilityLastYear,liability1yAgo,liability2yAgo,liability3yAgo,liability4yAgo,liabilityGrowthLastYear,liabilityGrowth1yAgo,liabilityGrowth2yAgo,liabilityGrowth3yAgo,liabilityGrowth4yAgo,cashFlowLastYear,cashFlow1yAgo,cashFlow2yAgo,cashFlow3yAgo,cashFlow4yAgo,cashFlowGrowthLastYear,cashFlowGrowth1yAgo,cashFlowGrowth2yAgo,cashFlowGrowth3yAgo,cashFlowGrowth4yAgo,changeCashLastYear,changeCash1yAgo,changeCash2yAgo,changeCash3yAgo,changeCash4yAgo,changeCashGrowthLastYear,changeCashGrowth1yAgo,changeCashGrowth2yAgo,changeCashGrowth3yAgo,changeCashGrowth4yAgo",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        }
+    },
+    "gex": {
+        "gamma_exposure_fields": {
+            "endpoint": "options",
+            "symbol_param": "symbols",
+            "fields": "symbol,strikePrice,optionType,baseDailyLastPrice,baseLastPrice,dailyGamma,gamma,delta,dailyDelta,dailyOpenInterest,openInterest,dailyVolume,volume,daysToExpiration,expirationDate,averageVolatility",
+            "expirations": "<expirations>",
+            "groupBy": "strikePrice",
+            "le(nearestToLast,100)": ""
+        }
+    },
+    "horizontal_spreads": {
+        "long_call_calendar_fields": {
+            "endpoint": "long_call_calendar",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDateLeg1,strikeLeg1,bidPriceLeg1,expirationDateLeg2,askPriceLeg2,netDebit,volatilityLeg1,volatilityLeg2,ivSkew,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,netVega,expirationType,averageVolatility,daysToExpiration,expirationDate,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "ivSkew",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "eq(type,call)": "",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "long_put_calendar_fields": {
+            "endpoint": "long_put_calendar",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDateLeg1,strikeLeg1,bidPriceLeg1,expirationDateLeg2,askPriceLeg2,netDebit,volatilityLeg1,volatilityLeg2,ivSkew,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,netVega,expirationType,averageVolatility,daysToExpiration,expirationDate,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "ivSkew",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "eq(type,put)": "",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "long_call_diagonal_fields": {
+            "endpoint": "long_call_diagonal",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDateLeg1,strikeLeg1,askPriceLeg1,expirationDateLeg2,strikeLeg2,bidPriceLeg2,netDebit,volatilityLeg1,volatilityLeg2,ivSkewInverse,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,netVega,expirationType,averageVolatility,daysToExpiration,expirationDate,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "ivSkewInverse",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "short_call_diagonal_fields": {
+            "endpoint": "short_call_diagonal",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDateLeg1,strikeLeg1,bidPriceLeg1,expirationDateLeg2,strikeLeg2,askPriceLeg2,netCredit,volatilityLeg1,volatilityLeg2,ivSkew,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,netVega,expirationType,averageVolatility,daysToExpiration,expirationDate,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "ivSkew",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "long_put_diagonal_fields": {
+            "endpoint": "long_put_diagonal",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDateLeg1,strikeLeg1,bidPriceLeg1,expirationDateLeg2,strikeLeg2,askPriceLeg2,netDebit,volatilityLeg1,volatilityLeg2,ivSkew,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,netVega,expirationType,averageVolatility,daysToExpiration,expirationDate,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "ivSkew",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        },
+        "short_put_diagonal_fields": {
+            "endpoint": "short_put_diagonal",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDateLeg1,strikeLeg1,askPriceLeg1,expirationDateLeg2,strikeLeg2,bidPriceLeg2,netDebit,volatilityLeg1,volatilityLeg2,ivSkewInverse,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,netVega,expirationType,averageVolatility,daysToExpiration,expirationDate,baseNextEarningsDate,timeCode,dividendExDate,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "ivSkewInverse",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1,
+            "meta": "expirations,field.shortName,field.type,field.description"
+        }
+    },
+    "insider_trades": {
+        "insider_trades_fields": {
+            "endpoint": "insider_trades",
+            "symbol_param": "eq(symbol,<symbol>)",
+            "fields": "fullName,shortJobTitle,transactionType,transactionDate,amount,reportedPrice,usdValue,eodHolding,eodHoldingPercentage,symbolCode,hasOptions,symbolType,lastPrice,dailyLastPrice",
+            "eq(symbol,<symbol>)": "",
+            "orderBy": "transactionDate",
+            "orderDir": "desc",
+            "meta": "field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        }
+    },
+    "key_statistics": {
+        "company_informations_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "symbolShortName,address,country,website,numberOfEmployees,phoneNumber,symbolDescription,exchange,industryGroup,industry,sicSymbol,sicDescription,sectors,tradeTime,hasOptions,hasWeeklyOptions,openPrice,highPrice,lowPrice,lastPrice,priceChange,percentChange",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "overview_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "marketCap,enterpriseValue,sharesOutstanding,annualSales,annualNetIncome,lastQuarterSales,lastQuarterIncome,ebit,ebitda,beta,percentInsider,percentInstitutional,float,floatPercentage,shortVolumeRatio",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "growth_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "percentChange1y, percentChange3y, percentChange5y,revenueGrowth5y,earningsGrowth5y,dividendGrowth5y",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "per_share_information_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "earnings,epsDate,nextEarningsDate,epsAnnual,epsGrowthQuarter,epsGrowthYear,dividendRate,dividendYield,dividend,dividendDate,dividendExDate,paymentDate,dividendPayout,split,splitDate",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "ratios_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "peRatioTrailing,peRatioForward,pegRatio,returnOnEquity,returnOnAssets,profitMargin,debtEquity,priceSales,priceCashFlow,priceBook,bookValue,interestCoverage",
+            "meta": "field.shortName,field.type,field.description",
+            "raw": 1
+        }
+    },
+    "long_call_put": {
+        "long_call_fields": {
+            "endpoint": "options",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,symbol,baseSymbol,askPrice,timePremiumAskPercent,breakEvenAsk,percentToBreakEvenAsk,netDebit,daysToExpiration,volume,openInterest,impliedVolatilityRank1y,delta,breakEvenProbability,tradeTime,otmProbability,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "strikePrice",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "ge(tradeTime,previousTradingDay)": "",
+            "between(delta,0.2,0.9)": "",
+            "eq(symbolType,call)": "",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "long_put_fields": {
+            "endpoint": "options",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,symbol,baseSymbol,askPrice,timePremiumAskPercent,breakEvenAsk,percentToBreakEvenAsk,netDebit,daysToExpiration,volume,openInterest,impliedVolatilityRank1y,delta,breakEvenProbability,tradeTime,otmProbability,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "strikePrice",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "ge(tradeTime,previousTradingDay)": "",
+            "between(delta,-0.9,-0.2)": "",
+            "eq(symbolType,put)": "",
+            "expirationType": "weekly",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        }
+    },
+    "max_pain_vol_skew": {
+        "max_pain_vol_skew_fields": {
+            "endpoint": "options",
+            "symbol_param": "symbols",
+            "raw": 1,
+            "fields": "symbol,strikePrice,optionType,baseLastPrice,openInterest,volume,volatility,daysToExpiration,expirationDate,tradeTime.format(m/d/y)",
+            "expirations": "<expirations>",
+            "groupBy": "expirationDate",
+            "le(nearestToLast,40)": ""
+        }
+    },
+    "naked_puts": {
+        "naked_puts_fields": {
+            "endpoint": "naked_puts",
+            "symbol_param": "baseSymbol",
+            "fields": "symbol,symbolType,symbolCode,baseSymbol,underlyingLastPrice,expirationDate,daysToExpiration,strike,moneyness,bidPrice,breakEvenBid,percentToBreakEvenBid,volume,openInterest,impliedVolatilityRank1y,delta,potentialReturn,potentialReturnAnnual,breakEvenProbability,tradeTime,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength",
+            "orderBy": "strike",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "between(delta,-0.6,-0.1)": "",
+            "expirationType": "weekly",
+            "page": 1,
+            "raw": 1
+        }
+    },
+    "opinion": {
+        "opinion_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "opinion,opinionSignal,opinionPercent,opinionStrength,opinionDirection,opinionChange,opinionPrevious,opinionPreviousSignal,opinionPreviousPercent,opinionLastWeek,opinionLastWeekSignal,opinionLastWeekPercent,opinionLastMonth,opinionLastMonthSignal,opinionLastMonthPercent,opinionShortTerm,opinionShortTermSignal,opinionShortTermPercent,opinionMediumTerm,opinionMediumTermSignal,opinionMediumTermPercent,opinionLongTerm,opinionLongTermSignal,opinionLongTermPercent",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "composite_indicator_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "trendSpotterSignal,trendSpotterStrength,trendSpotterDirection",
+            "meta": "field.shortName,fields.description,field.type",
+            "raw": 1
+        },
+        "short_term_indicators_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "movingAverage20dSignal,movingAverage20dStrength,movingAverage20dDirection,macd20to50dSignal,macd20to50dStrength,macd20to50dDirection,macd20to100dSignal,macd20to100dStrength,macd20to100dDirection,macd20to200dSignal,macd20to200dStrength,macd20to200dDirection",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "medium_term_indicators_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "movingAverage50dSignal,movingAverage50dStrength,movingAverage50dDirection,macd50to100dSignal,macd50to100dStrength,macd50to100dDirection,macd50to150dSignal,macd50to150dStrength,macd50to150dDirection,macd50to200dSignal,macd50to200dStrength,macd50to200dDirection",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "long_term_indicators_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "movingAverage100dSignal,movingAverage100dStrength,movingAverage100dDirection,movingAverage150dSignal,movingAverage150dStrength,movingAverage150dDirection,movingAverage200dSignal,movingAverage200dStrength,movingAverage200dDirection,macd100to200dSignal,macd100to200dStrength,macd100to200dDirection",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        }
+    },
+    "options_flow": {
+        "options_flow_fields": {
+            "endpoint": "options_flow",
+            "symbol_param": "symbol",
+            "fields": "symbol,baseSymbol,lastPrice,symbolType,strikePrice,expiration,dte,bidXSize,askXSize,tradePrice,tradeSize,side,premium,volume,openInterest,volatility,delta,tradeCondition,label,tradeTime.format(H:i:s \\E\\T),expirationType,askPrice,bidPrice,baseSymbolType,symbolCode",
+            "orderBy": "premium",
+            "orderDir": "desc",
+            "limit": 3,
+            "gt(tradeSize,10)": "",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "bullish_bearish_sentiment_fields": {
+            "endpoint": "options_flow",
+            "symbol_param": "symbol",
+            "fields": "symbolType,sentiment,premium,tradeSize,delta,symbolCode",
+            "in(sentiment,(Bearish,Bullish))": "",
+            "raw": 1,
+            "meta": "field.shortName,field.description,field.type"
+        }
+    },
+    "options_prices": {
+        "options_prices_fields": {
+            "endpoint": "options",
+            "symbol_param": "baseSymbol",
+            "fields": "symbol,baseSymbol,strikePrice,expirationDate,moneyness,bidPrice,midpoint,askPrice,lastPrice,priceChange,percentChange,volume,openInterest,openInterestChange,delta,volatility,optionType,daysToExpiration,tradeTime,averageVolatility,historicVolatility30d,baseNextEarningsDate,dividendExDate,baseTimeCode,impliedVolatilityRank1y,symbolCode,symbolType,theoretical,gamma,theta,vega,rho,volumeOpenInterestRatio,itmProbabilityexpirationType,expiration,dte,bidXSize,askXSize,tradePrice,tradeSize,side,premium,tradeCondition,label,baseSymbolType",
+            "groupBy": "optionType",
+            "expirationDate": "nearest",
+            "meta": "field.shortName,field.description,field.type",
+            "orderBy": "strikePrice",
+            "orderDir": "asc",
+            "optionsOverview": "true",
+            "raw": 1
+        }
+    },
+    "overview": {
+        "quote_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "lowPrice,highPrice,openPrice,lastPrice,volume,averageVolume20d,stochasticK14d,weightedAlpha,priceChange5d,percentChange5d,rangePercent1y,highPrice1y,lowPrice1y",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "fundamentals_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "marketCap,sharesOutstanding,annualSales,annualNetIncome,ebit,ebitda,beta,priceSales,priceCashFlow,priceBook,peRatioTrailing,epsAnnual,earnings,epsDate,nextEarningsDate,dividendRate,dividendYield,dividend,dividendDate,dividendExDate,industryGroup,sectors",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "options_overview_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "optionsWeightedImpliedVolatility,optionsWeightedImpliedVolatilityChange,historicVolatility30d,optionsImpliedVolatilityPercentile1y,optionsImpliedVolatilityRank1y,optionsWeightedImpliedVolatilityHigh1y,optionsWeightedImpliedVolatilityHighDate1y,optionsWeightedImpliedVolatilityLow1y,optionsWeightedImpliedVolatilityLowDate1y,optionsPutCallVolumeRatio,optionsTotalVolume,optionsTotalVolume1m,optionsPutCallOpenInterestRatio,optionsTotalOpenInterest,optionsTotalOpenInterest1m",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "analyst_rating_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "averageRecommendation,totalRecommendations,estimatedEarnings,estimatedEarnings1qAgo,highTargetEstimate,meanTargetEstimate,lowTargetEstimate",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "price_performance_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "highPrice1m,highDate1m,lowPrice1m,lowDate1m,priceChange1m,percentChange1m,highPrice3m,highDate3m,lowPrice3m,lowDate3m,priceChange3m,percentChange3m,highPrice1y,highDate1y,lowPrice1y,lowDate1y,priceChange1y,percentChange1y",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "technical_opinion_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "opinion,opinionSignal,opinionPercent,opinionStrength,opinionDirection,opinionChange",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        }
+    },
+    "performance_report": {
+        "past_5d_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "date1dAgo,open1dAgo,high1dAgo,low1dAgo,lastPrice1dAgo,priceChange1dAgo,percentChange1dAgo,volume1dAgo,date2dAgo,open2dAgo,high2dAgo,low2dAgo,lastPrice2dAgo,priceChange2dAgo,percentChange2dAgo,volume2dAgo,date3dAgo,open3dAgo,high3dAgo,low3dAgo,lastPrice3dAgo,priceChange3dAgo,percentChange3dAgo,volume3dAgo,date4dAgo,open4dAgo,high4dAgo,low4dAgo,lastPrice4dAgo,priceChange4dAgo,percentChange4dAgo,volume4dAgo,date5dAgo,open5dAgo,high5dAgo,low5dAgo,lastPrice5dAgo,priceChange5dAgo,percentChange5dAgo,volume5dAgo",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "past_5w_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "weeklyDate1wAgo,weeklyOpen1wAgo,weeklyHigh1wAgo,weeklyLow1wAgo,weeklyLastPrice1wAgo,weeklyPriceChange1wAgo,weeklyPercentChange1wAgo,weeklyVolume1wAgo,weeklyDate2wAgo,weeklyOpen2wAgo,weeklyHigh2wAgo,weeklyLow2wAgo,weeklyLastPrice2wAgo,weeklyPriceChange2wAgo,weeklyPercentChange2wAgo,weeklyVolume2wAgo,weeklyDate3wAgo,weeklyOpen3wAgo,weeklyHigh3wAgo,weeklyLow3wAgo,weeklyLastPrice3wAgo,weeklyPriceChange3wAgo,weeklyPercentChange3wAgo,weeklyVolume3wAgo,weeklyDate4wAgo,weeklyOpen4wAgo,weeklyHigh4wAgo,weeklyLow4wAgo,weeklyLastPrice4wAgo,weeklyPriceChange4wAgo,weeklyPercentChange4wAgo,weeklyVolume4wAgo,weeklyDate5wAgo,weeklyOpen5wAgo,weeklyHigh5wAgo,weeklyLow5wAgo,weeklyLastPrice5wAgo,weeklyPriceChange5wAgo,weeklyPercentChange5wAgo,weeklyVolume5wAgo",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "past_5m_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "monthlyDate1mAgo,monthlyOpen1mAgo,monthlyHigh1mAgo,monthlyLow1mAgo,monthlyLastPrice1mAgo,monthlyPriceChange1mAgo,monthlyPercentChange1mAgo,monthlyVolume1mAgo,monthlyDate2mAgo,monthlyOpen2mAgo,monthlyHigh2mAgo,monthlyLow2mAgo,monthlyLastPrice2mAgo,monthlyPriceChange2mAgo,monthlyPercentChange2mAgo,monthlyVolume2mAgo,monthlyDate3mAgo,monthlyOpen3mAgo,monthlyHigh3mAgo,monthlyLow3mAgo,monthlyLastPrice3mAgo,monthlyPriceChange3mAgo,monthlyPercentChange3mAgo,monthlyVolume3mAgo,monthlyDate4mAgo,monthlyOpen4mAgo,monthlyHigh4mAgo,monthlyLow4mAgo,monthlyLastPrice4mAgo,monthlyPriceChange4mAgo,monthlyPercentChange4mAgo,monthlyVolume4mAgo,monthlyDate5mAgo,monthlyOpen5mAgo,monthlyHigh5mAgo,monthlyLow5mAgo,monthlyLastPrice5mAgo,monthlyPriceChange5mAgo,monthlyPercentChange5mAgo,monthlyVolume5mAgo",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "price_perf_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "lastPrice,percentChange5d,lowPrice5d,highPrice5d,lastPrice,percentChange1m,lowPrice1m,highPrice1m,lastPrice,percentChange3m,lowPrice3m,highPrice3m,lastPrice,percentChange6m,lowPrice6m,highPrice6m,lastPrice,percentChangeYtd,lowPriceYtd,highPriceYtd,lastPrice,percentChange1y,lowPrice1y,highPrice1y,lastPrice,percentChange3y,lowPrice3y,highPrice3y,lastPrice,percentChange5y,lowPrice5y,highPrice5y,lastPrice,percentChange10y,lowPrice10y,highPrice10y",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "lows_highs_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "highHits1m,highPercent1m,lowHits1m,lowPercent1m,highHits3m,highPercent3m,lowHits3m,lowPercent3m,highHits6m,highPercent6m,lowHits6m,lowPercent6m,highHitsYtd,highPercentYtd,lowHitsYtd,lowPercentYtd,highHits1y,highPercent1y,lowHits1y,lowPercent1y,highHits3y,highPercent3y,lowHits3y,lowPercent3y,highHits5y,highPercent5y,lowHits5y,lowPercent5y,highHits10y,highPercent10y,lowHits10y,lowPercent10y",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        }
+    },
+    "protection_strategies": {
+        "married_puts_fields": {
+            "endpoint": "married_puts",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,symbol,underlyingLastPrice,expirationDate,daysToExpiration,strike,strikePrice,moneyness,askPrice,breakEvenAsk,breakEvenPercentAsk,maxRisk,downside,volume,openInterest,impliedVolatilityRank1y,overallDelta,breakEvenProbability,tradeTime,symbolCode,symbolType,expirationType,daysToExpiration,impliedVolatilityRank1y,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility",
+            "orderBy": "strikePrice",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "long_collar_spread_fields": {
+            "endpoint": "long_collar_spread",
+            "symbol_param": "baseSymbol",
+            "fields": "baseSymbol,baseSymbolType,underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,netDebitCredit,percentOfCost,maxProfit,maxLoss,maxRisk,upside,downside,overallDelta,breakEvenProbability,symbolCode,symbolType,expirationType,legs,daysToExpiration,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength",
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        }
+    },
+    "put_call_ratios": {
+        "put_call_ratio_fields": {
+            "endpoint": "options_expirations",
+            "symbol_param": "symbol",
+            "fields": "expirationDate,expirationType,daysToExpiration,putVolume,callVolume,totalVolume,putCallVolumeRatio,putOpenInterest,callOpenInterest,totalOpenInterest,putCallOpenInterestRatio,averageVolatility,symbolCode,symbolType,lastPrice,dailyLastPrice",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1,
+            "page": 1,
+            "limit": 100
+        },
+        "put_call_ratio_historical_fields": {
+            "endpoint": "options_historical",
+            "symbol_param": "symbol",
+            "fields": "putCallVolumeRatio,putCallOpenInterestRatio,date",
+            "limit": 200,
+            "orderBy": "date",
+            "orderDir": "desc"
+        }
+    },
+    "sec_filings": {
+        "sec_filings_fields": {
+            "endpoint": "sec_filings",
+            "symbol_param": "symbol",
+            "fields": "date,formName,description,htmlUrl,wordUrl,pdfUrl,excelUrl",
+            "transactions": "1",
+            "limit": "20"
+        }
+    },
+    "sector_competitors": {
+        "sector_competitors_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbol",
+            "lists": "stocks.inSector.all(<sector_symbol_from_key_statistics>)",
+            "fields": "weightedAlpha,lastPrice,priceChange,percentChange,highPrice1y,lowPrice1y,percentChange1y,tradeTime,symbolCode,symbolType,hasOptions",
+            "orderBy": "weightedAlpha",
+            "orderDir": "desc",
+            "meta": "field.shortName,field.type,field.description,lists.lastUpdate",
+            "hasOptions": "true",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        }
+    },
+    "straddles_strangles": {
+        "long_straddle_fields": {
+            "endpoint": "long_straddle",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "short_straddle_fields": {
+            "endpoint": "short_straddle",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "long_strangle_fields": {
+            "endpoint": "long_strangle",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,askPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,breakEvenProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        },
+        "short_strangle_fields": {
+            "endpoint": "short_strangle",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,bidPriceLeg2,upperBreakEven,upperBreakEvenPercent,lowerBreakEven,lowerBreakEvenPercent,netCredit,netDebit,percentOfStock,impliedVolatilityRank1y,intradayVs30dHistoricIV,netDelta,lossProbability,maxProfitProbability,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,baseTrendSpotterSignal,baseTrendSpotterStrength,averageVolatility,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "page": 1,
+            "limit": 100,
+            "raw": 1
+        }
+    },
+    "technical_analysis": {
+        "moving_averages_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "movingAverage5d,priceChange5d,percentChange5d,averageVolume5d,movingAverage20d,priceChange20d,percentChange20d,averageVolume20d,movingAverage50d,priceChange50d,percentChange50d,averageVolume50d,movingAverage100d,priceChange100d,percentChange100d,averageVolume100d,movingAverage200d,priceChange200d,percentChange200d,averageVolume200d,movingAverageYtd,priceChangeYtd,percentChangeYtd,averageVolumeYtd",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "stochastics_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "rawStochastic9d,rawStochastic14d,rawStochastic20d,rawStochastic50d,rawStochastic100d,stochasticK9d,stochasticK14d,stochasticK20d,stochasticK50d,stochasticK100d,stochasticD9d,stochasticD14d,stochasticD20d,stochasticD50d,stochasticD100d,averageTrueRange9d,averageTrueRange14d,averageTrueRange20d,averageTrueRange50d,averageTrueRange100d",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        },
+        "strength_fields": {
+            "endpoint": "quote",
+            "symbol_param": "symbols",
+            "fields": "relativeStrength5d,relativeStrength9d,relativeStrength14d,relativeStrength20d,relativeStrength50d,relativeStrength100d,percentR9d,percentR14d,percentR20d,percentR50d,percentR100d,historicVolatility9d,historicVolatility14d,historicVolatility20d,historicVolatility30d,historicVolatility50d,historicVolatility90d,historicVolatility100d,macdOscillator9d,macdOscillator14d,macdOscillator20d,macdOscillator50d,macdOscillator100d",
+            "meta": "field.shortName,field.description,field.type",
+            "raw": 1
+        }
+    },
+    "vertical_spreads": {
+        "bull_call_spreads_fields": {
+            "endpoint": "bull_call_spreads",
+            "symbol_param": "baseSymbol",
+            "fields": "breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "between(abs(deltaLeg1),0.3,)": "",
+            "between(abs(deltaLeg2),0.1,)": "",
+            "between(riskRewardRatio,0.33,1.5)": "",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "bear_call_spreads_fields": {
+            "endpoint": "bear_call_spreads",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,lossProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "between(abs(deltaLeg1),0,0.6)": "",
+            "between(abs(deltaLeg2),,0.3)": "",
+            "between(riskRewardRatio,2,5)": "",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "bear_put_spreads_fields": {
+            "endpoint": "bear_put_spreads",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,askPriceLeg1,strikeLeg2,bidPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,breakEvenProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "desc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "between(abs(deltaLeg1),0.3,)": "",
+            "between(abs(deltaLeg2),0.1,)": "",
+            "between(riskRewardRatio,0.33,1.5)": "",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "raw": 1
+        },
+        "bull_put_spreads_fields": {
+            "endpoint": "bull_put_spreads",
+            "symbol_param": "baseSymbol",
+            "fields": "underlyingLastPrice,expirationDate,daysToExpiration,strikeLeg1,bidPriceLeg1,strikeLeg2,askPriceLeg2,breakEven,breakEvenPercent,maxProfit,maxLoss,maxProfitPercent,riskRewardRatio,impliedVolatilityRank1y,lossProbability,time,averageVolatility,baseNextEarningsDate,timeCode,dividendExDate,historicVolatility30d,impliedVolatilityRank1y,baseTrendSpotterSignal,baseTrendSpotterStrength,symbolCode,symbolType",
+            "orderBy": "strikeLeg1",
+            "orderDir": "asc",
+            "expirationDate": "<expiration_date>",
+            "expirationType": "weekly",
+            "between(abs(deltaLeg1),,0.6)": "",
+            "between(abs(deltaLeg2),0,0.3)": "",
+            "between(riskRewardRatio,2,5)": "",
+            "meta": "expirations,field.shortName,field.type,field.description",
+            "raw": 1
+        }
+    },
+    "volatility_charts": {
+        "iv_rank_percentile_fields": {
+            "endpoint": "options_historical",
+            "symbol_param": "symbol",
+            "fields": "impliedVolatilityRank1y,impliedVolatilityPercentile1y,totalVolume,totalOpenInterest,historicalLastPrice,date",
+            "limit": 360,
+            "orderBy": "date",
+            "orderDir": "desc"
+        },
+        "historical_volatility_fields": {
+            "endpoint": "historical_volatility",
+            "symbol_param": "symbols",
+            "fields": "volatility,tradeTime",
+            "limit": 999,
+            "period": "30",
+            "orderBy": "tradeTime",
+            "orderDir": "desc"
+        },
+        "ex_histo_iv_fields": {
+            "endpoint": "options_delta",
+            "symbol_param": "symbol",
+            "fields": "date,delta05_puts,delta10_puts,delta15_puts,delta20_puts,delta25_puts,delta30_puts,delta35_puts,delta40_puts,delta45_puts,delta50_puts,delta55_puts,delta60_puts,delta65_puts,delta70_puts,delta75_puts,delta80_puts,delta85_puts,delta90_puts,delta95_puts,delta05_calls,delta10_calls,delta15_calls,delta20_calls,delta25_calls,delta30_calls,delta35_calls,delta40_calls,delta45_calls,delta50_calls,delta55_calls,delta60_calls,delta65_calls,delta70_calls,delta75_calls,delta80_calls,delta85_calls,delta90_calls,delta95_calls,delta05_both,delta10_both,delta15_both,delta20_both,delta25_both,delta30_both,delta35_both,delta40_both,delta45_both,delta50_both,delta55_both,delta60_both,delta65_both,delta70_both,delta75_both,delta80_both,delta85_both,delta90_both,delta95_both",
+            "expirations": "<expirations>",
+            "eq(date,latest)": "",
+            "groupBy": "date"
+        },
+        "dte_histo_iv_fields": {
+            "endpoint": "options_delta",
+            "symbol_param": "symbol",
+            "fields": "date,delta05_30_puts,delta05_60_puts,delta05_90_puts,delta05_120_puts,delta05_150_puts,delta05_180_puts,delta05_360_puts,delta10_30_puts,delta10_60_puts,delta10_90_puts,delta10_120_puts,delta10_150_puts,delta10_180_puts,delta10_360_puts,delta15_30_puts,delta15_60_puts,delta15_90_puts,delta15_120_puts,delta15_150_puts,delta15_180_puts,delta15_360_puts,delta20_30_puts,delta20_60_puts,delta20_90_puts,delta20_120_puts,delta20_150_puts,delta20_180_puts,delta20_360_puts,delta25_30_puts,delta25_60_puts,delta25_90_puts,delta25_120_puts,delta25_150_puts,delta25_180_puts,delta25_360_puts,delta30_30_puts,delta30_60_puts,delta30_90_puts,delta30_120_puts,delta30_150_puts,delta30_180_puts,delta30_360_puts,delta35_30_puts,delta35_60_puts,delta35_90_puts,delta35_120_puts,delta35_150_puts,delta35_180_puts,delta35_360_puts,delta40_30_puts,delta40_60_puts,delta40_90_puts,delta40_120_puts,delta40_150_puts,delta40_180_puts,delta40_360_puts,delta45_30_puts,delta45_60_puts,delta45_90_puts,delta45_120_puts,delta45_150_puts,delta45_180_puts,delta45_360_puts,delta50_30_puts,delta50_60_puts,delta50_90_puts,delta50_120_puts,delta50_150_puts,delta50_180_puts,delta50_360_puts,delta55_30_puts,delta55_60_puts,delta55_90_puts,delta55_120_puts,delta55_150_puts,delta55_180_puts,delta55_360_puts,delta60_30_puts,delta60_60_puts,delta60_90_puts,delta60_120_puts,delta60_150_puts,delta60_180_puts,delta60_360_puts,delta65_30_puts,delta65_60_puts,delta65_90_puts,delta65_120_puts,delta65_150_puts,delta65_180_puts,delta65_360_puts,delta70_30_puts,delta70_60_puts,delta70_90_puts,delta70_120_puts,delta70_150_puts,delta70_180_puts,delta70_360_puts,delta75_30_puts,delta75_60_puts,delta75_90_puts,delta75_120_puts,delta75_150_puts,delta75_180_puts,delta75_360_puts,delta80_30_puts,delta80_60_puts,delta80_90_puts,delta80_120_puts,delta80_150_puts,delta80_180_puts,delta80_360_puts,delta85_30_puts,delta85_60_puts,delta85_90_puts,delta85_120_puts,delta85_150_puts,delta85_180_puts,delta85_360_puts,delta90_30_puts,delta90_60_puts,delta90_90_puts,delta90_120_puts,delta90_150_puts,delta90_180_puts,delta90_360_puts,delta95_30_puts,delta95_60_puts,delta95_90_puts,delta95_120_puts,delta95_150_puts,delta95_180_puts,delta95_360_puts,delta05_30_calls,delta05_60_calls,delta05_90_calls,delta05_120_calls,delta05_150_calls,delta05_180_calls,delta05_360_calls,delta10_30_calls,delta10_60_calls,delta10_90_calls,delta10_120_calls,delta10_150_calls,delta10_180_calls,delta10_360_calls,delta15_30_calls,delta15_60_calls,delta15_90_calls,delta15_120_calls,delta15_150_calls,delta15_180_calls,delta15_360_calls,delta20_30_calls,delta20_60_calls,delta20_90_calls,delta20_120_calls,delta20_150_calls,delta20_180_calls,delta20_360_calls,delta25_30_calls,delta25_60_calls,delta25_90_calls,delta25_120_calls,delta25_150_calls,delta25_180_calls,delta25_360_calls,delta30_30_calls,delta30_60_calls,delta30_90_calls,delta30_120_calls,delta30_150_calls,delta30_180_calls,delta30_360_calls,delta35_30_calls,delta35_60_calls,delta35_90_calls,delta35_120_calls,delta35_150_calls,delta35_180_calls,delta35_360_calls,delta40_30_calls,delta40_60_calls,delta40_90_calls,delta40_120_calls,delta40_150_calls,delta40_180_calls,delta40_360_calls,delta45_30_calls,delta45_60_calls,delta45_90_calls,delta45_120_calls,delta45_150_calls,delta45_180_calls,delta45_360_calls,delta50_30_calls,delta50_60_calls,delta50_90_calls,delta50_120_calls,delta50_150_calls,delta50_180_calls,delta50_360_calls,delta55_30_calls,delta55_60_calls,delta55_90_calls,delta55_120_calls,delta55_150_calls,delta55_180_calls,delta55_360_calls,delta60_30_calls,delta60_60_calls,delta60_90_calls,delta60_120_calls,delta60_150_calls,delta60_180_calls,delta60_360_calls,delta65_30_calls,delta65_60_calls,delta65_90_calls,delta65_120_calls,delta65_150_calls,delta65_180_calls,delta65_360_calls,delta70_30_calls,delta70_60_calls,delta70_90_calls,delta70_120_calls,delta70_150_calls,delta70_180_calls,delta70_360_calls,delta75_30_calls,delta75_60_calls,delta75_90_calls,delta75_120_calls,delta75_150_calls,delta75_180_calls,delta75_360_calls,delta80_30_calls,delta80_60_calls,delta80_90_calls,delta80_120_calls,delta80_150_calls,delta80_180_calls,delta80_360_calls,delta85_30_calls,delta85_60_calls,delta85_90_calls,delta85_120_calls,delta85_150_calls,delta85_180_calls,delta85_360_calls,delta90_30_calls,delta90_60_calls,delta90_90_calls,delta90_120_calls,delta90_150_calls,delta90_180_calls,delta90_360_calls,delta95_30_calls,delta95_60_calls,delta95_90_calls,delta95_120_calls,delta95_150_calls,delta95_180_calls,delta95_360_calls,delta05_30_both,delta05_60_both,delta05_90_both,delta05_120_both,delta05_150_both,delta05_180_both,delta05_360_both,delta10_30_both,delta10_60_both,delta10_90_both,delta10_120_both,delta10_150_both,delta10_180_both,delta10_360_both,delta15_30_both,delta15_60_both,delta15_90_both,delta15_120_both,delta15_150_both,delta15_180_both,delta15_360_both,delta20_30_both,delta20_60_both,delta20_90_both,delta20_120_both,delta20_150_both,delta20_180_both,delta20_360_both,delta25_30_both,delta25_60_both,delta25_90_both,delta25_120_both,delta25_150_both,delta25_180_both,delta25_360_both,delta30_30_both,delta30_60_both,delta30_90_both,delta30_120_both,delta30_150_both,delta30_180_both,delta30_360_both,delta35_30_both,delta35_60_both,delta35_90_both,delta35_120_both,delta35_150_both,delta35_180_both,delta35_360_both,delta40_30_both,delta40_60_both,delta40_90_both,delta40_120_both,delta40_150_both,delta40_180_both,delta40_360_both,delta45_30_both,delta45_60_both,delta45_90_both,delta45_120_both,delta45_150_both,delta45_180_both,delta45_360_both,delta50_30_both,delta50_60_both,delta50_90_both,delta50_120_both,delta50_150_both,delta50_180_both,delta50_360_both,delta55_30_both,delta55_60_both,delta55_90_both,delta55_120_both,delta55_150_both,delta55_180_both,delta55_360_both,delta60_30_both,delta60_60_both,delta60_90_both,delta60_120_both,delta60_150_both,delta60_180_both,delta60_360_both,delta65_30_both,delta65_60_both,delta65_90_both,delta65_120_both,delta65_150_both,delta65_180_both,delta65_360_both,delta70_30_both,delta70_60_both,delta70_90_both,delta70_120_both,delta70_150_both,delta70_180_both,delta70_360_both,delta75_30_both,delta75_60_both,delta75_90_both,delta75_120_both,delta75_150_both,delta75_180_both,delta75_360_both,delta80_30_both,delta80_60_both,delta80_90_both,delta80_120_both,delta80_150_both,delta80_180_both,delta80_360_both,delta85_30_both,delta85_60_both,delta85_90_both,delta85_120_both,delta85_150_both,delta85_180_both,delta85_360_both,delta90_30_both,delta90_60_both,delta90_90_both,delta90_120_both,delta90_150_both,delta90_180_both,delta90_360_both,delta95_30_both,delta95_60_both,delta95_90_both,delta95_120_both,delta95_150_both,delta95_180_both,delta95_360_both,",
+            "limit": "999",
+            "orderBy": "date",
+            "orderDir": "desc",
+            "groupBy": "date"
+        }
+    }
+}
