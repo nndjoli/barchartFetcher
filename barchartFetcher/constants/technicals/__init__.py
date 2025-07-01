@@ -1,2 +1,0 @@
-from .technical_analysis import TechnicalAnalysisFields
-from .barchart_opinion import OpinionFields
