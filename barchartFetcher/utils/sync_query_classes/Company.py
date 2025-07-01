@@ -139,3 +139,24 @@ class Company:
         return SyncQueryFunctions.company.sec_filings(
             self.__query_manager__, symbol, transactions, limit
         )
+
+    def insider_trades(
+        self,
+        symbol: str = "AAPL",
+        transactions: int | float = 1,
+        limit: int = 20,
+    ):
+        """Retrieve insider trades for `symbol` from Barchart.
+
+        Parameters
+        ----------
+        symbol : str, default "AAPL"
+            Ticker symbol.
+        transactions : int or float, default 1
+            Number of transactions to request.
+        limit : int, default 20
+            Maximum number of rows to return.
+        """
+        return SyncQueryFunctions.company.insider_trades(
+            self.__query_manager__, symbol, transactions, limit
+        )
