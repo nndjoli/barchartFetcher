@@ -1,4 +1,4 @@
-from barchartFetcher.constants.query_async_dicts import make_async_dicts
+from barchartFetcher.utils.query_async_dicts import make_async_dicts
 from barchartFetcher.utils.query_manager import QueryManager
 from barchartFetcher.utils.sync_query_functions.options import (
     options_expirations,
