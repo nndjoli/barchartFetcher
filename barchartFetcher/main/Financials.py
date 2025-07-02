@@ -32,3 +32,63 @@ class Financials:
         return SyncQueryFunctions.financials.financial_summary_y(
             self.__query_manager__, symbols, raw
         )
+
+    def income_statement(
+        self, symbol: str = "AAPL", frequency: str = "annual", page: int = 1
+    ):
+        """Income statement for `symbol` from Barchart.
+
+        Parameters
+        ----------
+        symbol : str, default "AAPL"
+            Ticker symbol.
+        frequency : str, default "annual"
+            Frequency of the income statement, either "annual" or "quarterly".
+        page : int, default 1
+            Page number for paginated results.
+        """
+        return SyncQueryFunctions.financials.process_income_statement_response(
+            SyncQueryFunctions.financials.income_statement(
+                self.__query_manager__, symbol, frequency, page
+            )
+        )
+
+    def balance_sheet(
+        self, symbol: str = "AAPL", frequency: str = "annual", page: int = 1
+    ):
+        """Balance sheet for `symbol` from Barchart.
+
+        Parameters
+        ----------
+        symbol : str, default "AAPL"
+            Ticker symbol.
+        frequency : str, default "annual"
+            Frequency of the balance sheet, either "annual" or "quarterly".
+        page : int, default 1
+            Page number for paginated results.
+        """
+        return SyncQueryFunctions.financials.process_balance_sheet_responser(
+            SyncQueryFunctions.financials.balance_sheet(
+                self.__query_manager__, symbol, frequency, page
+            )
+        )
+
+    def cash_flow(
+        self, symbol: str = "AAPL", frequency: str = "annual", page: int = 1
+    ):
+        """Cash flow statement for `symbol` from Barchart.
+
+        Parameters
+        ----------
+        symbol : str, default "AAPL"
+            Ticker symbol.
+        frequency : str, default "annual"
+            Frequency of the cash flow statement, either "annual" or "quarterly".
+        page : int, default 1
+            Page number for paginated results.
+        """
+        return SyncQueryFunctions.financials.process_cash_flow_response(
+            SyncQueryFunctions.financials.cash_flow(
+                self.__query_manager__, symbol, frequency, page
+            )
+        )

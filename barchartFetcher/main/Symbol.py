@@ -1,5 +1,10 @@
 from barchartFetcher.utils.query_async_dicts import make_async_dicts
 from barchartFetcher.utils.query_manager import QueryManager
+from barchartFetcher.utils.sync_query_functions.financials import (
+    process_balance_sheet_responser,
+    process_cash_flow_response,
+    process_income_statement_response,
+)
 from barchartFetcher.utils.sync_query_functions.options import (
     options_expirations,
 )
@@ -27,7 +32,26 @@ class Symbol:
         self.__ad__ = make_async_dicts(self.symbol, self.__oe_str__)
 
     def financials(self):
-        return self.__qm__.async_queries(self.__ad__["financials"])
+        data = self.__qm__.async_queries(self.__ad__["financials"])
+        data["yearly_income_statement"] = process_income_statement_response(
+            data["yearly_income_statement"], "dict"
+        )
+        data["quarterly_income_statement"] = process_income_statement_response(
+            data["quarterly_income_statement"], "dict"
+        )
+        data["yearly_balance_sheet"] = process_balance_sheet_responser(
+            data["yearly_balance_sheet"], "dict"
+        )
+        data["quarterly_balance_sheet"] = process_balance_sheet_responser(
+            data["quarterly_balance_sheet"], "dict"
+        )
+        data["yearly_cash_flow"] = process_cash_flow_response(
+            data["yearly_cash_flow"], "dict"
+        )
+        data["quarterly_cash_flow"] = process_cash_flow_response(
+            data["quarterly_cash_flow"], "dict"
+        )
+        return data
 
     def analysts(self):
         return self.__qm__.async_queries(self.__ad__["analysts"])

@@ -2,6 +2,12 @@ def make_async_dicts(symbol, expirations):
     financials = {
         "quarterly_summary": f"https://www.barchart.com/proxies/core-api/v1/quotes/get?symbols={symbol}&raw=1&fields=symbol%2CrevenueLastQuarter%2Crevenue1qAgo%2Crevenue2qAgo%2Crevenue3qAgo%2Crevenue4qAgo%2CrevenueGrowthLastQuarter%2CrevenueGrowth1qAgo%2CrevenueGrowth2qAgo%2CrevenueGrowth3qAgo%2CrevenueGrowth4qAgo%2CnetIncomeLastQuarter%2CnetIncome1qAgo%2CnetIncome2qAgo%2CnetIncome3qAgo%2CnetIncome4qAgo%2CnetIncomeGrowthLastQuarter%2CnetIncomeGrowth1qAgo%2CnetIncomeGrowth2qAgo%2CnetIncomeGrowth3qAgo%2CnetIncomeGrowth4qAgo%2CassetLastQuarter%2Casset1qAgo%2Casset2qAgo%2Casset3qAgo%2Casset4qAgo%2CassetGrowthLastQuarter%2CassetGrowth1qAgo%2CassetGrowth2qAgo%2CassetGrowth3qAgo%2CassetGrowth4qAgo%2CliabilityLastQuarter%2Cliability1qAgo%2Cliability2qAgo%2Cliability3qAgo%2Cliability4qAgo%2CliabilityGrowthLastQuarter%2CliabilityGrowth1qAgo%2CliabilityGrowth2qAgo%2CliabilityGrowth3qAgo%2CliabilityGrowth4qAgo%2CcashFlowLastQuarter%2CcashFlow1qAgo%2CcashFlow2qAgo%2CcashFlow3qAgo%2CcashFlow4qAgo%2CcashFlowGrowthLastQuarter%2CcashFlowGrowth1qAgo%2CcashFlowGrowth2qAgo%2CcashFlowGrowth3qAgo%2CcashFlowGrowth4qAgo%2CchangeCashLastQuarter%2CchangeCash1qAgo%2CchangeCash2qAgo%2CchangeCash3qAgo%2CchangeCash4qAgo%2CchangeCashGrowthLastQuarter%2CchangeCashGrowth1qAgo%2CchangeCashGrowth2qAgo%2CchangeCashGrowth3qAgo%2CchangeCashGrowth4qAgo&meta=field.shortName%2Cfield.type%2Cfield.description",
         "yearly_summary": f"https://www.barchart.com/proxies/core-api/v1/quotes/get?symbols={symbol}&raw=1&fields=symbol%2CrevenueLastYear%2Crevenue1yAgo%2Crevenue2yAgo%2Crevenue3yAgo%2Crevenue4yAgo%2CrevenueGrowthLastYearrevenueGrowth1yAgo%2CrevenueGrowth2yAgo%2CrevenueGrowth3yAgo%2CrevenueGrowth4yAgo%2CnetIncomeLastYear%2CnetIncome1yAgo%2CnetIncome2yAgo%2CnetIncome3yAgo%2CnetIncome4yAgo%2CnetIncomeGrowthLastYear%2CnetIncomeGrowth1yAgo%2CnetIncomeGrowth2yAgo%2CnetIncomeGrowth3yAgo%2CnetIncomeGrowth4yAgo%2CassetLastYear%2Casset1yAgo%2Casset2yAgo%2Casset3yAgo%2Casset4yAgo%2CassetGrowthLastYear%2CassetGrowth1yAgo%2CassetGrowth2yAgo%2CassetGrowth3yAgo%2CassetGrowth4yAgo%2CliabilityLastYear%2Cliability1yAgo%2Cliability2yAgo%2Cliability3yAgo%2Cliability4yAgo%2CliabilityGrowthLastYear%2CliabilityGrowth1yAgo%2CliabilityGrowth2yAgo%2CliabilityGrowth3yAgo%2CliabilityGrowth4yAgo%2CcashFlowLastYear%2CcashFlow1yAgo%2CcashFlow2yAgo%2CcashFlow3yAgo%2CcashFlow4yAgo%2CcashFlowGrowthLastYear%2CcashFlowGrowth1yAgo%2CcashFlowGrowth2yAgo%2CcashFlowGrowth3yAgo%2CcashFlowGrowth4yAgo%2CchangeCashLastYear%2CchangeCash1yAgo%2CchangeCash2yAgo%2CchangeCash3yAgo%2CchangeCash4yAgo%2CchangeCashGrowthLastYear%2CchangeCashGrowth1yAgo%2CchangeCashGrowth2yAgo%2CchangeCashGrowth3yAgo%2CchangeCashGrowth4yAgo&meta=field.shortName%2Cfield.type%2Cfield.description",
+        "yearly_income_statement": f"https://www.barchart.com/stocks/quotes/{symbol}/income-statement/annual?reportPage=1",
+        "quarterly_income_statement": f"https://www.barchart.com/stocks/quotes/{symbol}/income-statement/quarterly?reportPage=1",
+        "quarterly_balance_sheet": f"https://www.barchart.com/stocks/quotes/{symbol}/balance-sheet/quarterly?reportPage=1",
+        "yearly_balance_sheet": f"https://www.barchart.com/stocks/quotes/{symbol}/balance-sheet/annual?reportPage=1",
+        "quarterly_cash_flow": f"https://www.barchart.com/stocks/quotes/{symbol}/cash-flow/quarterly?reportPage=1",
+        "yearly_cash_flow": f"https://www.barchart.com/stocks/quotes/{symbol}/cash-flow/annual?reportPage=1",
     }
 
     analysts = {
@@ -138,5 +144,10 @@ def make_async_dicts(symbol, expirations):
     for dictionary in dicts:
         for key, value in dicts[dictionary].items():
             dicts[dictionary][key] = {"url": value, "output_format": "json"}
+
+            if key.endswith(
+                ("income_statement", "balance_sheet", "cash_flow")
+            ):
+                dicts[dictionary][key]["output_format"] = "html"
 
     return dicts
