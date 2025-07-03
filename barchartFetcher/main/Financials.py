@@ -1,4 +1,7 @@
 from barchartFetcher.utils import QueryManager, SyncQueryFunctions
+from barchartFetcher.utils.html_parser_functions.financial_table_parser import (
+    parse_financial_table,
+)
 
 
 class Financials:
@@ -47,7 +50,7 @@ class Financials:
         page : int, default 1
             Page number for paginated results.
         """
-        return SyncQueryFunctions.financials.process_income_statement_response(
+        return parse_financial_table(
             SyncQueryFunctions.financials.income_statement(
                 self.__query_manager__, symbol, frequency, page
             )
@@ -67,7 +70,7 @@ class Financials:
         page : int, default 1
             Page number for paginated results.
         """
-        return SyncQueryFunctions.financials.process_balance_sheet_responser(
+        return parse_financial_table(
             SyncQueryFunctions.financials.balance_sheet(
                 self.__query_manager__, symbol, frequency, page
             )
@@ -87,7 +90,7 @@ class Financials:
         page : int, default 1
             Page number for paginated results.
         """
-        return SyncQueryFunctions.financials.process_cash_flow_response(
+        return parse_financial_table(
             SyncQueryFunctions.financials.cash_flow(
                 self.__query_manager__, symbol, frequency, page
             )

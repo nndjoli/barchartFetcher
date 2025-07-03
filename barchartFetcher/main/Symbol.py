@@ -1,10 +1,8 @@
+from barchartFetcher.utils.html_parser_functions.financial_table_parser import (
+    parse_financial_table,
+)
 from barchartFetcher.utils.query_async_dicts import make_async_dicts
 from barchartFetcher.utils.query_manager import QueryManager
-from barchartFetcher.utils.sync_query_functions.financials import (
-    process_balance_sheet_responser,
-    process_cash_flow_response,
-    process_income_statement_response,
-)
 from barchartFetcher.utils.sync_query_functions.options import (
     options_expirations,
 )
@@ -33,23 +31,23 @@ class Symbol:
 
     def financials(self):
         data = self.__qm__.async_queries(self.__ad__["financials"])
-        data["yearly_income_statement"] = process_income_statement_response(
-            data["yearly_income_statement"], "dict"
+        data["yearly_income_statement"] = parse_financial_table(
+            data["yearly_income_statement"]
         )
-        data["quarterly_income_statement"] = process_income_statement_response(
-            data["quarterly_income_statement"], "dict"
+        data["quarterly_income_statement"] = parse_financial_table(
+            data["quarterly_income_statement"]
         )
-        data["yearly_balance_sheet"] = process_balance_sheet_responser(
-            data["yearly_balance_sheet"], "dict"
+        data["yearly_balance_sheet"] = parse_financial_table(
+            data["yearly_balance_sheet"]
         )
-        data["quarterly_balance_sheet"] = process_balance_sheet_responser(
-            data["quarterly_balance_sheet"], "dict"
+        data["quarterly_balance_sheet"] = parse_financial_table(
+            data["quarterly_balance_sheet"]
         )
-        data["yearly_cash_flow"] = process_cash_flow_response(
-            data["yearly_cash_flow"], "dict"
+        data["yearly_cash_flow"] = parse_financial_table(
+            data["yearly_cash_flow"]
         )
-        data["quarterly_cash_flow"] = process_cash_flow_response(
-            data["quarterly_cash_flow"], "dict"
+        data["quarterly_cash_flow"] = parse_financial_table(
+            data["quarterly_cash_flow"]
         )
         return data
 
