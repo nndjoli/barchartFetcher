@@ -12,9 +12,6 @@ def income_statement(
     if frequency not in ["annual", "quarterly"]:
         raise ValueError("Frequency must be 'annual' or 'quarterly'.")
 
-    if format not in ["dataframe", "dict"]:
-        raise ValueError("Format must be 'dataframe' or 'dict'.")
-
     url = f"https://www.barchart.com/stocks/quotes/{symbol}/income-statement/{frequency}?reportPage={page}"
 
     data = query_manager.sync_query(url=url, output_format="html")
