@@ -12,9 +12,6 @@ def balance_sheet(
     if frequency not in ["annual", "quarterly"]:
         raise ValueError("Frequency must be 'annual' or 'quarterly'.")
 
-    if format not in ["dataframe", "dict"]:
-        raise ValueError("Format must be 'dataframe' or 'dict'.")
-
     url = f"https://www.barchart.com/stocks/quotes/{symbol}/balance-sheet/{frequency}?reportPage={page}"
     data = query_manager.sync_query(url=url, output_format="html")
     return data
