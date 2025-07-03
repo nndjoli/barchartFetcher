@@ -1,15 +1,30 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "barchartFetcher"
 version = "0.1.0"
 description = "Client utilities for fetching market data from Barchart"
-license = {text = "MIT"}
+authors = [
+  { name = "nndjoli" }
+]
+readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.10"
-
-dependencies = ["httpx","nest_asyncio"]
+dependencies = [
+  "httpx",
+  "pandas",
+  "nest_asyncio",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
 
 [project.urls]
 Homepage = "https://github.com/nndjoli/barchartFetcher"
+
+[tool.setuptools.packages.find]
+where = ["barchartFetcher"]
