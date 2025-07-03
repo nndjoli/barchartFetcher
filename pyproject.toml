@@ -16,7 +16,7 @@ dependencies = [
   "httpx",
   "pandas",
   "nest_asyncio",
-  "BeautifulSoup",
+  "beautifulsoup4",
 ]
 classifiers = [
   "Programming Language :: Python :: 3",
