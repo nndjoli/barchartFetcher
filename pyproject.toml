@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "barchartFetcher"
-version = "0.1.0"
+version = "0.1.1"
 description = "Client utilities for fetching market data from Barchart"
 authors = [
   { name = "nndjoli" }

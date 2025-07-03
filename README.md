@@ -8,7 +8,7 @@ Client utilities for fetching quotes, options data and fundamental metrics from 
 * **To install**, run:
 
 ```bash
-pip install barchartFetcher==0.1.0
+pip install barchartFetcher==0.1.1
 ```
 
 <h2>Example:</h2>
