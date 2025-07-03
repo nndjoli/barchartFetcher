@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "barchartFetcher"
-version = "0.1.1"
+version = "1.0.0"
 description = "Client utilities for fetching market data from Barchart"
 authors = [
   { name = "nndjoli" }
@@ -28,4 +28,5 @@ classifiers = [
 Homepage = "https://github.com/nndjoli/barchartFetcher"
 
 [tool.setuptools.packages.find]
-where = ["barchartFetcher"]
+where = ["."]
+include = ["barchartFetcher*"]
