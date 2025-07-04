@@ -2,6 +2,7 @@
 
 Client utilities for fetching quotes, options data and fundamental metrics from Barchart.
 
+* **Documentation**: [barchartFetcher documentation](https://github.com/nndjoli/barchartFetcher/blob/main/docs/documentation.md)
 <h2>Requirements & Installation:</h2>
 
 * **Dependencies**: `httpx`, `nest_asyncio`, `pandas`, `beautifulsoup4`
@@ -345,6 +346,6 @@ Available helper classes and their main use-cases are summarized below.
 | `Analysts`          | Analyst ratings and earnings estimates                      | True                          |
 | `Company`           | Company profile, ratios and insider transactions            | True                          |
 | `Technicals`        | Moving averages, stochastics and other indicators           | True                          |
-| `Symbol`            | Convenience wrapper combining the above for a single symbol | False (Uses Barchart Default parameters (Recommendend))                          |
+| `Symbol`            | Convenience wrapper combining the above for a single symbol | False (uses Barchart default parameters; recommended)                          |
 
 Results are typically returned as parsed JSON objects or DataFrames (for tables scraped from HTML). The package uses `httpx` with an internal cookie/session manager to query Barchart endpoints.
