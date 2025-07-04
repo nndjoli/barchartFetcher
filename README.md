@@ -349,3 +349,7 @@ Available helper classes and their main use-cases are summarized below.
 | `Symbol`            | Convenience wrapper combining the above for a single symbol | False (uses Barchart default parameters; recommended)                          |
 
 Results are typically returned as parsed JSON objects or DataFrames (for tables scraped from HTML). The package uses `httpx` with an internal cookie/session manager to query Barchart endpoints.
+
+<h2>Usage Disclaimer</h2>
+
+This library is intended for personal and educational use only. It is not affiliated with or endorsed by Barchart. The maintainers do not encourage or condone scraping or any activity that violates Barchart’s Terms of Service. Refer to the MIT License in this repository for warranty and liability information.
